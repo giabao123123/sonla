@@ -1,0 +1,3529 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <title>Sơn La</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://giabao123123.github.io/webcon/web%20con.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./logo sơn la/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body class="w3-light-grey" style="padding-top: 110px" id="hero">
+    <a href="#hero" class="scroll-top-button">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <aside id="backToTop">
+      <a href="#hero" aria-label="Lên đầu trang">
+        <span class="arrow arrow-1"></span>
+        <span class="arrow arrow-2"></span>
+      </a>
+    </aside>
+
+    <aside class="box w3-right neon-box2" style="margin-top: 2%">
+      <p class="text">Chào mừng đến với tỉnh Sơn La!</p>
+    </aside>
+
+    <header class="w3-top">
+      <nav class="w3-bar w3-white w3-padding w3-card">
+        <a href="#home" class="w3-bar-item neon-box">Sơn La</a>
+        <button class="scroll-btn left-btn w3-hide-small w3-hide-medium">
+          ❮
+        </button>
+        <button class="scroll-btn right-btn w3-hide-small w3-hide-medium">
+          ❯
+        </button>
+        <button id="toggleBtn">▶ Phát nhạc</button>
+        <audio id="bgMusic">
+          <source
+            src="./logo đồng nai/241E758F-SAOHAYRADQU-LDNGBOLM-OFFIC.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul
+          style="
+            background: linear-gradient(180deg, #ff9800, #ff5722);
+            color: #fffaf0;
+          "
+          class="menu w3-right w3-button"
+          id="menu-list"
+        >
+          <li><a href="#about">LỊCH SỬ HÌNH THÀNH</a></li>
+          <li><a href="#menu">ĐỊA LÝ</a></li>
+          <li><a href="#khihau">KHÍ HẬU</a></li>
+          <li><a href="#DIEUKIENTUNHIEN">ĐIỀU KIỆN TỰ NHIÊN</a></li>
+          <li>
+            <a href="#THOITIET">DỰ BÁO THỜI TIẾT TRONG TỈNH</a>
+          </li>
+          <li><a href="#contact">DÂN CƯ</a></li>
+          <li><a href="#VANHOA">VĂN HOÁ</a></li>
+          <li><a href="#DITICH">DI TÍCH, DI SẢN VĂN HOÁ</a></li>
+          <li><a href="#GIAODUC">GIÁO DỤC</a></li>
+          <li><a href="#KINHTE">KINH TẾ</a></li>
+          <li><a href="#AMTHUC">ẨM THỰC</a></li>
+          <li><a href="#DULICH">DU LỊCH</a></li>
+          <li><a href="#tiemnang">TIỀM NĂNG PHÁT TRIÊN</a></li>
+          <li>
+            <a href="https://giabao123123.github.io/trochoisonla/">TRÒ CHƠI</a>
+          </li>
+        </ul>
+        <script>
+          const menuLinks = document.querySelectorAll("#menu-list a");
+          const menuToggle = document.getElementById("menu-toggle");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 768) {
+                menuToggle.checked = false;
+              }
+            });
+          });
+        </script>
+        <nav
+          style="
+            background: linear-gradient(180deg, #ff9800, #ff5722);
+            color: #fff3cd;
+          "
+          class="w3-animate-left w3-hide-small neon-box"
+        >
+          <menu
+            class="menu-scroll"
+            style="margin: 0; padding: 0; display: flex"
+          >
+            <a href="#about" class="w3-bar-item w3-button"
+              >LỊCH SỬ HÌNH THÀNH</a
+            >
+            <a href="#menu" class="w3-bar-item w3-button">ĐỊA LÝ</a>
+            <a href="#DIEUKIENTUNHIEN" class="w3-bar-item w3-button"
+              >ĐIỀU KIỆN TỰ NHIÊN</a
+            >
+            <a href="#khihau" class="w3-bar-item w3-button">KHÍ HẬU</a>
+            <a href="#THOITIET" class="w3-bar-item w3-button"
+              >DỰ BÁO THỜI TIẾT TRONG TỈNH</a
+            >
+            <a href="#contact" class="w3-bar-item w3-button">DÂN CƯ</a>
+            <a href="#VANHOA" class="w3-bar-item w3-button">VĂN HOÁ</a>
+            <a href="#DITICH" class="w3-bar-item w3-button"
+              >DI TÍCH, DI SẢN VĂN HOÁ</a
+            >
+            <a href="#GIAODUC" class="w3-bar-item w3-button">GIÁO DỤC</a>
+            <a href="#KINHTE" class="w3-bar-item w3-button">KINH TẾ</a>
+            <a href="#AMTHUC" class="w3-bar-item w3-button">ẨM THỰC</a>
+            <a href="#DULICH" class="w3-bar-item w3-button">DU LỊCH</a>
+            <a href="#tiemnang" class="w3-bar-item w3-button"
+              >TIỀM NĂNG PHÁT TRIÊN</a
+            >
+            <a
+              href="https://giabao123123.github.io/trochoisonla/"
+              class="w3-bar-item w3-button"
+              >TRÒ CHƠI</a
+            >
+          </menu>
+        </nav>
+      </nav>
+    </header>
+
+    <main class="w3-content" style="max-width: 1100px">
+      <section class="w3-row w3-padding-16 w3-animate-left" id="about">
+        <h1 class="w3-center" style="color: red; font-size: 35px">
+          LỊCH SỬ HÌNH THÀNH
+        </h1>
+        <article>
+          <p>
+            <strong
+              ><mark
+                >Thời kỳ sơ khai và thời nhà Lý (thế kỷ 11-12):</mark
+              ></strong
+            >
+          </p>
+          <p>
+            Vùng trung tâm tỉnh Sơn La ngày nay, bao gồm các huyện Mường La,
+            Thuận Châu, Mai Sơn… từng là lãnh thổ của vương quốc Ngưu Hống, được
+            ghi nhận trong <em>Đại Việt sử ký toàn thư</em>. Đây là khu vực sinh
+            sống của người Thái và các dân tộc thiểu số khác từ thời cổ, với hệ
+            thống làng mạc và thổ cư truyền thống.
+          </p>
+
+          <p>
+            <strong><mark>Thời kỳ Pháp thuộc (1886 – 1945):</mark></strong>
+          </p>
+          <p>
+            Ngày <u>24/5/1886</u>, Pháp thành lập
+            <strong>châu Sơn La</strong> thuộc phủ Gia Hưng, tỉnh Hưng Hóa. Sau
+            đó, nhiều đơn vị hành chính được tổ chức lại: năm <u>1892</u> thành
+            lập <strong>tiểu quân khu Vạn Bú</strong>, năm <u>1895</u> thành
+            <strong>tỉnh Vạn Bú</strong>, và năm <u>1904</u> đổi tên thành
+            <strong>tỉnh Sơn La</strong> với tỉnh lỵ đặt tại vị trí hiện nay là
+            thành phố Sơn La. Trong thời gian này, Pháp xây dựng nhiều công
+            trình như nhà tù Sơn La (<u>1907</u>) và mở các trường dạy chữ quốc
+            ngữ, chữ Pháp (<u>1917</u>). Một số công sứ nổi tiếng trong giai
+            đoạn này có Monpeyrat, Saint-Poulof, Cousseau và Robert.
+          </p>
+
+          <p>
+            <strong
+              ><mark
+                >Thời kỳ kháng chiến chống Pháp (1946 – 1955):</mark
+              ></strong
+            >
+          </p>
+          <p>
+            Sau năm <u>1946</u>, tỉnh Sơn La thuộc
+            <strong>Xứ Thái tự trị</strong> do Pháp quản lý, với Bạc Cầm Quý làm
+            tỉnh trưởng. Giai đoạn <u>1948-1953</u>, Sơn La thuộc
+            <strong>Liên khu Việt Bắc</strong>, gồm 6 huyện: Mường La, Thuận
+            Châu, Phù Yên, Mai Sơn, Yên Châu, Mộc Châu. Từ <u>1953-1955</u>,
+            tỉnh thuộc <strong>Khu Tây Bắc</strong>.
+          </p>
+
+          <p>
+            <strong><mark>Thời kỳ sau 1955 – 1975:</mark></strong>
+          </p>
+          <p>
+            Năm <u>1955</u>, Sơn La được sáp nhập vào
+            <strong>Khu tự trị Thái Mèo</strong>, sau <u>1962</u> tái lập tỉnh,
+            thuộc <strong>Khu tự trị Tây Bắc</strong>. Khi đó, Sơn La có 7
+            huyện: Mai Sơn, Mộc Châu, Mường La, Quỳnh Nhai, Sông Mã, Thuận Châu,
+            Yên Châu. Huyện Phù Yên được chuyển sang tỉnh Nghĩa Lộ.
+          </p>
+
+          <p>
+            <strong><mark>Giai đoạn từ 1975 đến nay:</mark></strong>
+          </p>
+          <p>
+            Sau giải thể <strong>Khu tự trị Tây Bắc</strong>, Sơn La mở rộng với
+            9 huyện: Bắc Yên, Mai Sơn, Mộc Châu, Mường La, Phù Yên, Quỳnh Nhai,
+            Sông Mã, Thuận Châu, Yên Châu. Năm <u>2003</u>, chia huyện Sông Mã
+            thành Sông Mã và Sốp Cộp; năm <u>2013</u>, chia huyện Mộc Châu thành
+            Mộc Châu và Vân Hồ; năm <u>2025</u>, Mộc Châu được nâng cấp thành
+            <strong>thị xã Mộc Châu</strong>. Hiện nay, tỉnh Sơn La có
+            <strong>1 thành phố, 1 thị xã và 10 huyện</strong>.
+          </p>
+        </article>
+
+        <p style="font-size: 15px">
+          (nguồn thông tin:
+          <a href="https://vi.wikipedia.org/wiki/S%C6%A1n_La" target="_blank"
+            >wiki Sơn La</a
+          >
+          )
+        </p>
+
+        <figure class="w3-center">
+          <img
+            src="https://media.baosonla.org.vn/public/khanhhb/2023-06-02/mot-goc-trung-tam-thanh-pho-son-la.jpg"
+            class="w3-container"
+            alt="Thành phố Sơn La"
+          />
+          <figcaption style="font-size: 15px">
+            (nguồn hình ảnh:
+            <a
+              href="https://xaydungso.vn/blog/800-anh-dep-son-la-cung-tim-hieu-ve-dep-cua-tay-bac-vi-cb.html"
+              target="_blank"
+              >xaydungso.vn</a
+            >
+            )
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+
+      <section class="w3-row-padding w3-padding-16 w3-content" id="menu">
+        <h1 class="w3-padding-16" style="color: red; font-size: 50px">
+          ĐỊA LÝ
+        </h1>
+        <article>
+          <p>
+            Tỉnh Sơn La có toạ độ địa lý: 20o37' - 22o02' vĩ độ Bắc và 103o11' -
+            105o02' kinh độ Đông. Trung tâm hành chính của tỉnh là thành phố Sơn
+            La, nằm cách trung tâm thủ đô Hà Nội khoảng 302 km
+          </p>
+          <p>
+            Sơn La có đường biên giới quốc gia dài 274 km, chiều dài giáp ranh
+            với các tỉnh khác là 628 km.
+          </p>
+          <p>Diện tích của tỉnh khoảng 16.486,49 km².</p>
+
+          <p><strong>Điểm cực của tỉnh:</strong></p>
+          <ul>
+            <li>
+              Điểm cực bắc tại: xã Cà Nàng, huyện Quỳnh Nhai, khoảng
+              <u>21°10′B, 104°30′Đ</u>
+            </li>
+            <li>
+              Điểm cực đông tại: xã Chiềng Yên, huyện Vân Hồ, khoảng
+              <u>20°25′B, 105°10′Đ</u>
+            </li>
+            <li>
+              Điểm cực tây tại: xã Mường Lèo, huyện Sốp Cộp, khoảng
+              <u>21°01′B, 106°00′Đ</u>
+            </li>
+            <li>
+              Điểm cực nam tại: xã Tân Xuân, huyện Vân Hồ, khoảng
+              <u>19°25′B, 103°55′Đ</u>
+            </li>
+          </ul>
+          <p>
+            Lưu ý: Các điểm cực hiện chưa được công bố tọa độ chính thức; các số
+            liệu trên chỉ mang tính ước lượng, dựa trên bản đồ hành chính tỉnh
+            Lào Cai sau sáp nhập (2025) và dữ liệu bản đồ số.
+          </p>
+
+          <p><strong>Tiếp giáp:</strong></p>
+          <ul>
+            <li>Phía đông giáp tỉnh Phú Thọ</li>
+            <li>Phía tây giáp tỉnh Điện Biên</li>
+            <li>
+              Phía nam giáp với tỉnh Thanh Hóa và các tỉnh Huaphanh,
+              Luangprabang, Lào
+            </li>
+            <li>Phía bắc giáp tỉnh Lai Châu và tỉnh Lào Cai.</li>
+          </ul>
+        </article>
+        <p style="font-size: 15px">
+          Nguồn thông tin:
+          <a href="https://vi.wikipedia.org/wiki/S%C6%A1n_La" target="_blank"
+            >Wikipedia – Sơn La</a
+          >
+        </p>
+
+        <figure class="w3-center">
+          <img
+            src="https://media.ever.vn/uploads/bai-viet/noi-dung/ban-do-hanh-chinh-tinh-son-la_t318uk2c0b.jpg?w=768&q=90&output=webp"
+            class="w3-round w3-image w3-opacity-min w3-center"
+            alt="Bản đồ Sơn La"
+            style="width: 75%"
+          />
+          <div class="text-overlay"></div>
+          <figcaption style="font-size: 15px">
+            Nguồn hình ảnh:
+            <a
+              href="https://ever.vn/ban-do-tinh-son-la-sau-sap-nhap"
+              target="_blank"
+              >ever.vn</a
+            >
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+
+      <section
+        class="w3-row-padding w3-padding-16 w3-content"
+        id="DIEUKIENTUNHIEN"
+      >
+        <h1 class="w3-center" style="font-size: 50px">ĐIỀU KIỆN TỰ NHIÊN</h1>
+        <article>
+          <p>
+            <strong><mark>Vị trí và giao thông:</mark></strong>
+          </p>
+          <p>
+            Sơn La nằm cách Hà Nội <u>302 km</u> theo trục Quốc lộ 6 Hà Nội –
+            Sơn La – Điện Biên. Tỉnh nằm sâu trong nội địa và có
+            <u>3 cửa khẩu với Lào</u>: quốc tế Chiềng Khương, Lóng Sập và Nà
+            Cài.
+          </p>
+
+          <p>
+            <strong><mark>Địa hình:</mark></strong>
+          </p>
+          <p>
+            Sơn La có độ cao trung bình <u>600–700 m</u> so với mực nước biển,
+            địa hình chia cắt mạnh, phần lớn là đồi núi, đặc biệt ở các huyện
+            Sốp Cộp, Thuận Châu, Bắc Yên. Tỉnh có 2 cao nguyên chính là Cao
+            nguyên Mộc Châu và Cao nguyên Sơn La, nơi địa hình tương đối bằng
+            phẳng.
+          </p>
+
+          <p>
+            <strong><mark>Sông ngòi và thung lũng:</mark></strong>
+          </p>
+          <p>
+            <em>97% diện tích tự nhiên</em> Sơn La thuộc lưu vực sông Đà và sông
+            Mã. Thủy hệ này tạo ra các thung lũng phù sa và cũng gây xâm thực,
+            khoét sâu vào các ngọn đồi, mở rộng thung lũng. Các đồng cỏ rộng lớn
+            ở cao nguyên Mộc Châu là nơi chăn nuôi gia súc thuận lợi.
+          </p>
+
+          <p>
+            <strong><mark>Tài nguyên thủy điện và giao thông:</mark></strong>
+          </p>
+          <p>
+            Sơn La có nhiều sông suối, thác ghềnh, nên nguồn thủy điện rất dồi
+            dào. Nhà máy thủy điện Sơn La là lớn nhất Đông Nam Á hiện nay. Các
+            dãy núi cao ở phía Bắc và Đông chắn các tuyến giao thông, tạo ra
+            nhiều đèo nổi tiếng như Pha Đin, Tà Xùa, Chiềng Đông, Cón, Lũng Lô.
+          </p>
+        </article>
+        <p style="font-size: 15px">
+          (nguồn thông tin:
+          <a href="https://vi.wikipedia.org/wiki/S%C6%A1n_La" target="_blank"
+            >wiki Sơn La</a
+          >)
+        </p>
+      </section>
+      <hr />
+
+      <section
+        class="w3-container w3-padding-16 table-responsive w3-content"
+        style="overflow-x: auto"
+        id="khihau"
+      >
+        <h1 style="font-size: 50px">KHÍ HẬU</h1>
+        <br />
+        <article>
+          <p>
+            <strong><mark>Khí hậu:</mark></strong>
+          </p>
+          <p>
+            Sơn La có khí hậu cận nhiệt đới ẩm vùng núi, mùa đông phi nhiệt đới
+            lạnh khô, mùa hè nóng ẩm, mưa nhiều. Do địa hình bị chia cắt sâu và
+            mạnh nên hình thành nhiều tiểu vùng khí hậu, cho phép phát triển một
+            nền sản xuất nông - lâm nghiệp phong phú. Vùng cao nguyên Mộc Châu
+            phù hợp với cây trồng và vật nuôi vùng ôn đới. Vùng dọc sông Đà phù
+            hợp với cây rừng nhiệt đới xanh quanh năm.
+          </p>
+
+          <p>
+            Thống kê nhiệt độ trung bình năm của Sơn La có xu hướng tăng trong
+            20 năm gần đây với mức tăng <u>0,5–0,6 °C</u>. Nhiệt độ trung bình
+            năm của Thành phố Sơn La hiện ở mức <u>21,1 °C</u>, Yên Châu
+            <u>23 °C</u>. Lượng mưa trung bình năm có xu hướng giảm (thành phố
+            hiện ở mức <u>1.402 mm</u>, Mộc Châu <u>1.563 mm</u>); độ ẩm không
+            khí trung bình năm cũng giảm.
+          </p>
+
+          <p>
+            Mùa mưa kết thúc khá sớm vào khoảng đầu tháng <u>9</u> và bắt đầu
+            mùa khô kéo dài khốc liệt đến tận cuối tháng <u>4</u> năm sau, gây
+            ra tình trạng khô hạn và thiếu nước. Gió tây khô nóng vào những
+            tháng cuối mùa khô đầu mùa mưa (<u>tháng 4–6</u>) là yếu tố ảnh
+            hưởng tới sản xuất nông nghiệp của tỉnh. Sương muối, mưa đá, lũ quét
+            là những yếu tố bất lợi.
+          </p>
+        </article>
+
+        <figure>
+          <table
+            style="
+              width: 100%;
+              border-color: rgb(162, 169, 177);
+              background-color: rgb(234, 236, 240);
+            "
+          >
+            <tbody>
+              <tr>
+                <th colspan="14">Dữ liệu khí hậu của Sơn La</th>
+              </tr>
+              <tr>
+                <th scope="row">Tháng</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+                <th scope="col">10</th>
+                <th scope="col">11</th>
+                <th scope="col">12</th>
+                <th>Năm</th>
+              </tr>
+              <tr style="text-align: center">
+                <th>Kỷ lục cao °C (°F)</th>
+                <td style="background: #ffb3b3">31<br />(88)</td>
+                <td style="background: #ff9999">33<br />(91)</td>
+                <td style="background: #ff8080">36<br />(97)</td>
+                <td style="background: #ff6666">38<br />(100)</td>
+                <td style="background: #ff4d4d">39<br />(102)</td>
+                <td style="background: #ff3333">40<br />(104)</td>
+                <td style="background: #ff1a1a">42<br />(108)</td>
+                <td style="background: #ff3333">41<br />(106)</td>
+                <td style="background: #ff6666">38<br />(100)</td>
+                <td style="background: #ff8080">37<br />(99)</td>
+                <td style="background: #ff9999">34<br />(93)</td>
+                <td style="background: #ffb3b3">32<br />(90)</td>
+                <td style="background: #ed0000; color: white">42<br />(108)</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Trung bình ngày tối đa °C (°F)</th>
+                <td style="background: #ffe0b3">21<br />(70)</td>
+                <td style="background: #ffe6b3">23<br />(73)</td>
+                <td style="background: #ffecb3">26<br />(79)</td>
+                <td style="background: #fff2b3">30<br />(86)</td>
+                <td style="background: #fff7b3">32<br />(90)</td>
+                <td style="background: #fffbb3">33<br />(91)</td>
+                <td style="background: #fffbb3">33<br />(91)</td>
+                <td style="background: #fff7b3">32<br />(90)</td>
+                <td style="background: #fff2b3">30<br />(86)</td>
+                <td style="background: #ffecb3">28<br />(82)</td>
+                <td style="background: #ffe6b3">25<br />(77)</td>
+                <td style="background: #ffe0b3">22<br />(72)</td>
+                <td style="background: #ffd4a3">29.5<br />(85)</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Trung bình ngày °C (°F)</th>
+                <td style="background: #ffe6cc">17<br />(63)</td>
+                <td style="background: #ffedcc">18<br />(64)</td>
+                <td style="background: #fff3cc">21<br />(70)</td>
+                <td style="background: #fff9cc">25<br />(77)</td>
+                <td style="background: #ffffcc">27<br />(81)</td>
+                <td style="background: #ffffb3">29<br />(84)</td>
+                <td style="background: #ffffb3">29<br />(84)</td>
+                <td style="background: #ffffb3">28<br />(82)</td>
+                <td style="background: #ffffcc">26<br />(79)</td>
+                <td style="background: #fff9cc">24<br />(75)</td>
+                <td style="background: #fff3cc">21<br />(70)</td>
+                <td style="background: #ffeccc">18<br />(64)</td>
+                <td style="background: #ffd4a3">23<br />(73)</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Tối thiểu trung bình ngày °C (°F)</th>
+                <td style="background: #fff0d9">12<br />(54)</td>
+                <td style="background: #fff3d9">13<br />(55)</td>
+                <td style="background: #fff7d9">16<br />(61)</td>
+                <td style="background: #fffccc">19<br />(66)</td>
+                <td style="background: #ffffcc">21<br />(70)</td>
+                <td style="background: #ffffcc">23<br />(73)</td>
+                <td style="background: #ffffcc">23<br />(73)</td>
+                <td style="background: #ffffcc">22<br />(72)</td>
+                <td style="background: #ffffcc">20<br />(68)</td>
+                <td style="background: #fff7cc">18<br />(64)</td>
+                <td style="background: #fff3cc">16<br />(61)</td>
+                <td style="background: #ffead0">14<br />(57)</td>
+                <td style="background: #ffd4a3">17<br />(63)</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Kỷ lục thấp °C (°F)</th>
+                <td style="background: #cce5ff">3<br />(37)</td>
+                <td style="background: #cce5ff">5<br />(41)</td>
+                <td style="background: #99ccff">8<br />(46)</td>
+                <td style="background: #66b2ff">13<br />(55)</td>
+                <td style="background: #3399ff">16<br />(61)</td>
+                <td style="background: #3399ff">18<br />(64)</td>
+                <td style="background: #3399ff">19<br />(66)</td>
+                <td style="background: #66b2ff">17<br />(63)</td>
+                <td style="background: #99ccff">14<br />(57)</td>
+                <td style="background: #cce5ff">10<br />(50)</td>
+                <td style="background: #cce5ff">7<br />(45)</td>
+                <td style="background: #cce5ff">3<br />(37)</td>
+                <td style="background: #cce5ff">3<br />(37)</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Lượng mưa trung bình mm (inches)</th>
+                <td style="background: #e0ffe0">50<br />(1.97)</td>
+                <td style="background: #d4ffd4">40<br />(1.57)</td>
+                <td style="background: #bfffbc">70<br />(2.76)</td>
+                <td style="background: #99ff99">90<br />(3.54)</td>
+                <td style="background: #66ff66">110<br />(4.33)</td>
+                <td style="background: #33cc33; color: white">
+                  130<br />(5.12)
+                </td>
+                <td style="background: #33cc33; color: white">
+                  150<br />(5.91)
+                </td>
+                <td style="background: #009900; color: white">
+                  200<br />(7.87)
+                </td>
+                <td style="background: #006600; color: white">
+                  300<br />(11.81)
+                </td>
+                <td style="background: #006600; color: white">
+                  350<br />(13.78)
+                </td>
+                <td style="background: #339933; color: white">
+                  250<br />(9.84)
+                </td>
+                <td style="background: #99ff99">100<br />(3.94)</td>
+                <td style="background: #004c00; color: white">
+                  1800<br />(70.87)
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Số ngày mưa trung bình</th>
+                <td style="background: #b3b3ff">9</td>
+                <td style="background: #b3b3ff">8</td>
+                <td style="background: #9999ff">10</td>
+                <td style="background: #8080ff">12</td>
+                <td style="background: #6666ff">15</td>
+                <td style="background: #4d4dff">16</td>
+                <td style="background: #4d4dff">17</td>
+                <td style="background: #3333ff">18</td>
+                <td style="background: #3333ff">20</td>
+                <td style="background: #4d4dff">17</td>
+                <td style="background: #6666ff">14</td>
+                <td style="background: #8080ff">12</td>
+                <td style="background: #0000ff; color: white">150</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Độ ẩm trung bình (%)</th>
+                <td style="background: #99ccff">85</td>
+                <td style="background: #99ccff">86</td>
+                <td style="background: #80bfff">85</td>
+                <td style="background: #66b2ff">84</td>
+                <td style="background: #3399ff">81</td>
+                <td style="background: #007fff; color: white">79</td>
+                <td style="background: #007fff; color: white">78</td>
+                <td style="background: #3399ff">80</td>
+                <td style="background: #007fff; color: white">85</td>
+                <td style="background: #0066cc; color: white">87</td>
+                <td style="background: #3399ff">88</td>
+                <td style="background: #66b2ff">85</td>
+                <td style="background: #007fff; color: white">86</td>
+              </tr>
+              <tr style="text-align: center">
+                <th>Số giờ nắng trung bình tháng</th>
+                <td style="background: #cccccc">80</td>
+                <td style="background: #bbbbbb">90</td>
+                <td style="background: #aaaaaa">130</td>
+                <td style="background: #999900">160</td>
+                <td style="background: #dddd00">180</td>
+                <td style="background: #d6d600">190</td>
+                <td style="background: #cccc00">200</td>
+                <td style="background: #cfcf00">180</td>
+                <td style="background: #d2d200">150</td>
+                <td style="background: #cbcb00">130</td>
+                <td style="background: #c0c024">100</td>
+                <td style="background: #b8b855">80</td>
+                <td style="background: #999900">1630</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption style="font-size: 15px">
+            (Nguồn thông tin:
+            <a href="https://vi.wikipedia.org/wiki/S%C6%A1n_La" target="_blank"
+              >wiki Sơn La</a
+            >,
+            <a
+              href="https://www.weather.com/vn-VN/thu-tin/son-la"
+              target="_blank"
+              >weather.com</a
+            >
+            )
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+      <section class="w3-row-padding w3-padding-16" id="THOITIET">
+        <h1 class="w3-padding-16" style="color: red; font-size: 50px">
+          DỰ BÁO THỜI TIẾT TRONG TỈNH
+        </h1>
+        <div
+          style="
+            max-width: 760px;
+            margin: 0 auto;
+            font-family: &quot;Montserrat&quot;, Arial, sans-serif;
+          "
+        >
+          <h2
+            class="section-title"
+            style="text-align: center; color: #0a3d2e; margin-bottom: 6px"
+          >
+            🌤 Dự Báo Thời Tiết
+          </h2>
+          <p
+            style="
+              text-align: center;
+              color: #666;
+              font-size: 14px;
+              margin-bottom: 20px;
+            "
+          >
+            Gõ tên xã / phường / thị trấn để xem dự báo thời tiết
+          </p>
+
+          <div
+            style="position: relative; max-width: 440px; margin: 0 auto 22px"
+          >
+            <span
+              style="
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 17px;
+                pointer-events: none;
+              "
+              >🔍</span
+            >
+            <input
+              type="text"
+              id="tt-input"
+              placeholder="Gõ tên xã, phường, thị trấn..."
+              oninput="ttFilter()"
+              onfocus="ttShow()"
+              autocomplete="off"
+              style="
+                width: 100%;
+                padding: 13px 14px 13px 42px;
+                font-size: 15px;
+                border-radius: 10px;
+                border: 2px solid #0a3d2e;
+                color: #333;
+                background: #fff;
+                font-family: inherit;
+                outline: none;
+                box-sizing: border-box;
+              "
+            />
+            <div
+              id="tt-drop"
+              style="
+                display: none;
+                position: absolute;
+                top: calc(100% + 4px);
+                left: 0;
+                right: 0;
+                background: #fff;
+                border: 2px solid #0a3d2e;
+                border-radius: 10px;
+                max-height: 250px;
+                overflow-y: auto;
+                z-index: 9999;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+              "
+            ></div>
+          </div>
+
+          <div
+            id="tt-box"
+            style="
+              display: none;
+              border-radius: 14px;
+              overflow: hidden;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            "
+          >
+            <div
+              style="
+                background: #0a3d2e;
+                color: #fff;
+                padding: 12px 20px;
+                font-size: 15px;
+                font-weight: 600;
+              "
+            >
+              📍 Thời tiết: <span id="tt-name"></span>
+            </div>
+            <div id="tt-widget-wrap" style="background: #fff"></div>
+            <div
+              id="tt-noembed"
+              style="
+                display: none;
+                padding: 24px;
+                text-align: center;
+                background: #fff;
+              "
+            >
+              <p style="color: #888; font-size: 14px">
+                ⚙️ Khu vực này chưa có dữ liệu.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var TT_AREAS = [
+            {
+              name: "Thành phố Sơn La",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/son-la?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Quỳnh Nhai",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/quynh-nhai?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Thuận Châu",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/thuan-chau?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Mường La",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/muong-la?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Bắc Yên",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/bac-yen?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Phù Yên",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/phu-yen?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Mộc Châu",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/moc-chau?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Yên Châu",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/yen-chau?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Mai Sơn",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/mai-son?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Sông Mã",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/song-ma?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Sốp Cộp",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/sop-cop?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Vân Hồ",
+              parent: "Tỉnh Sơn La cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/son-la/van-ho?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+          ];
+          function ttNorm(s) {
+            return s
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .replace(/đ/g, "d");
+          }
+
+          var ttFiltered = TT_AREAS.slice();
+
+          function ttFilter() {
+            var q = ttNorm(document.getElementById("tt-input").value.trim());
+            ttFiltered = q
+              ? TT_AREAS.filter(function (a) {
+                  return ttNorm(a.name).indexOf(q) !== -1;
+                })
+              : TT_AREAS.slice();
+            ttRender();
+            document.getElementById("tt-drop").style.display = "block";
+          }
+
+          function ttShow() {
+            ttFiltered = TT_AREAS.slice();
+            ttRender();
+            document.getElementById("tt-drop").style.display = "block";
+          }
+
+          function ttRender() {
+            var dd = document.getElementById("tt-drop");
+            if (!ttFiltered.length) {
+              dd.innerHTML =
+                '<div style="padding:14px 18px;color:#999;font-size:14px;">Không tìm thấy</div>';
+              return;
+            }
+            dd.innerHTML = ttFiltered
+              .map(function (a) {
+                var idx = TT_AREAS.indexOf(a);
+                var dot = a.widget.trim()
+                  ? '<span style="color:#27ae60;font-size:10px;margin-left:6px;" title="Đã có widget">●</span>'
+                  : '<span style="color:#ccc;font-size:10px;margin-left:6px;" title="Chưa có widget">●</span>';
+                return (
+                  '<div onclick="ttSelect(' +
+                  idx +
+                  ')"' +
+                  ' style="padding:11px 18px;font-size:14px;cursor:pointer;' +
+                  'border-bottom:1px solid #f5f5f5;display:flex;align-items:center;"' +
+                  " onmouseover=\"this.style.background='#f0f7f4'\"" +
+                  " onmouseout=\"this.style.background='#fff'\">" +
+                  '<span style="color:#0a3d2e;font-weight:600;">' +
+                  a.name +
+                  "</span>" +
+                  dot +
+                  "</div>"
+                );
+              })
+              .join("");
+          }
+
+          function ttSelect(idx) {
+            var a = TT_AREAS[idx];
+            document.getElementById("tt-input").value = a.name;
+            document.getElementById("tt-drop").style.display = "none";
+            var locationTitle = a.name;
+            if (a.parent) {
+              locationTitle += " (" + a.parent + ")";
+            }
+
+            document.getElementById("tt-name").textContent = locationTitle;
+            document.getElementById("tt-box").style.display = "block";
+
+            var wrap = document.getElementById("tt-widget-wrap");
+            var noEmbed = document.getElementById("tt-noembed");
+
+            if (a.widget && a.widget.trim()) {
+              wrap.innerHTML = a.widget;
+              wrap.style.display = "block";
+              noEmbed.style.display = "none";
+            } else {
+              wrap.innerHTML = "";
+              wrap.style.display = "none";
+              noEmbed.style.display = "block";
+            }
+
+            document
+              .getElementById("tt-box")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+
+          document.addEventListener("click", function (e) {
+            var inp = document.getElementById("tt-input");
+            var drop = document.getElementById("tt-drop");
+            if (drop && e.target !== inp && !drop.contains(e.target))
+              drop.style.display = "none";
+          });
+        </script>
+      </section>
+      <hr />
+      <section class="w3-row w3-padding-16 w3-content" id="contact">
+        <h1 class="w3-center" style="font-size: 50px">DÂN CƯ</h1>
+        <article>
+          <figure style="overflow-x: auto">
+            <table
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #999;
+              "
+            >
+              <tr style="background: #f0f0f0">
+                <th>Năm</th>
+                <th>Dân số</th>
+                <th>±%</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>1995</td>
+                  <td>1.024.900</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>1996</td>
+                  <td>1.052.800</td>
+                  <td>+2,7%</td>
+                </tr>
+                <tr>
+                  <td>1997</td>
+                  <td>1.091.300</td>
+                  <td>+3,7%</td>
+                </tr>
+                <tr>
+                  <td>1998</td>
+                  <td>1.129.400</td>
+                  <td>+3,5%</td>
+                </tr>
+                <tr>
+                  <td>1999</td>
+                  <td>1.145.200</td>
+                  <td>+1,4%</td>
+                </tr>
+                <tr>
+                  <td>2000</td>
+                  <td>1.151.100</td>
+                  <td>+0,5%</td>
+                </tr>
+                <tr>
+                  <td>2001</td>
+                  <td>1.157.000</td>
+                  <td>+0,5%</td>
+                </tr>
+                <tr>
+                  <td>2002</td>
+                  <td>1.161.600</td>
+                  <td>+0,4%</td>
+                </tr>
+                <tr>
+                  <td>2003</td>
+                  <td>1.164.900</td>
+                  <td>+0,3%</td>
+                </tr>
+                <tr>
+                  <td>2004</td>
+                  <td>1.170.000</td>
+                  <td>+0,4%</td>
+                </tr>
+                <tr>
+                  <td>2005</td>
+                  <td>1.175.600</td>
+                  <td>+0,5%</td>
+                </tr>
+                <tr>
+                  <td>2006</td>
+                  <td>1.180.100</td>
+                  <td>+0,4%</td>
+                </tr>
+                <tr>
+                  <td>2007</td>
+                  <td>1.185.200</td>
+                  <td>+0,4%</td>
+                </tr>
+                <tr>
+                  <td>2008</td>
+                  <td>1.192.100</td>
+                  <td>+0,6%</td>
+                </tr>
+                <tr>
+                  <td>2009</td>
+                  <td>1.195.500</td>
+                  <td>+0,3%</td>
+                </tr>
+                <tr>
+                  <td>2010</td>
+                  <td>1.215.700</td>
+                  <td>+1,7%</td>
+                </tr>
+                <tr>
+                  <td>2011</td>
+                  <td>1.225.900</td>
+                  <td>+0,8%</td>
+                </tr>
+                <tr>
+                  <td>2012</td>
+                  <td>1.253.300</td>
+                  <td>+2,2%</td>
+                </tr>
+                <tr>
+                  <td>2013</td>
+                  <td>1.283.300</td>
+                  <td>+2,4%</td>
+                </tr>
+                <tr>
+                  <td>2014</td>
+                  <td>1.310.400</td>
+                  <td>+2,1%</td>
+                </tr>
+                <tr>
+                  <td>2015</td>
+                  <td>1.337.900</td>
+                  <td>+2,1%</td>
+                </tr>
+                <tr>
+                  <td>2016</td>
+                  <td>1.369.500</td>
+                  <td>+2,4%</td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td>1.390.300</td>
+                  <td>+1,5%</td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td>1.420.100</td>
+                  <td>+2,1%</td>
+                </tr>
+                <tr>
+                  <td>2019</td>
+                  <td>1.440.200</td>
+                  <td>+1,4%</td>
+                </tr>
+                <tr>
+                  <td>2020</td>
+                  <td>1.465.200</td>
+                  <td>+1,7%</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>1.490.800</td>
+                  <td>+1,7%</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>1.500.000</td>
+                  <td>+0,6%</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>1.520.000</td>
+                  <td>+1,3%</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td>1.540.000</td>
+                  <td>+1,3%</td>
+                </tr>
+              </tbody>
+            </table>
+            <figcaption>
+              <p>
+                <strong
+                  ><mark>Kết quả điều tra dân số ngày 1/4/2019:</mark></strong
+                >
+              </p>
+              <p>
+                Tỉnh Sơn La có <u>1.248.415</u> người, tổng số hộ là
+                <u>289.516</u> hộ, trong đó nam có <u>632.598</u> người, nữ có
+                <u>615.917</u> người. Sơn La là tỉnh đông dân nhất vùng Tây Bắc
+                Bộ. <u>16.6%</u> dân số sống ở thành thị và <u>83,4%</u> dân số
+                sống ở nông thôn.
+              </p>
+              <p style="font-size: 15px">
+                (Nguồn thông tin:
+                <a
+                  href="https://vi.wikipedia.org/wiki/S%C6%A1n_La"
+                  target="_blank"
+                  >Wikipedia – Sơn La</a
+                >
+                <br />
+                Dữ liệu ước tính từ các cơ quan thống kê của tỉnh Sơn La và báo
+                cáo dân số chính thức. Các số liệu có thể thay đổi theo từng năm
+                và cần tham khảo các nguồn chính thống từ Tổng cục Thống kê Việt
+                Nam hoặc các cơ quan địa phương khác. )
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="VANHOA">
+        <h1 class="w3-center" style="font-size: 50px">VĂN HOÁ, LỄ HỘI</h1>
+        <article>
+          <h2 style="font-size: 40px">
+            <strong><mark>VĂN HOÁ:</mark></strong>
+          </h2>
+          <p>
+            <strong><mark>Văn hóa và lễ hội ở Sơn La</mark></strong>
+          </p>
+          <p>
+            <u>Sơn La</u> là tỉnh có nhiều dân tộc cư trú nên có sự đa dạng về
+            văn hoá truyền thống, đời sống, tập tục.
+          </p>
+
+          <p>
+            <u>Sơn La</u> có nhiều lễ hội của các dân tộc, mỗi lễ hội đều có nét
+            đặc sắc riêng như <u>Tết cơm mới</u> của người <u>Khơ Mú</u>,
+            <u>Lễ hội hoa ban</u>, <u>Lễ hội Pang Cẩu Nỏ</u> của dân tộc
+            <u>Khơ Mú, Xinh Mun</u>; <u>Lễ hội dâng hoa măng</u> của người
+            <u>La Ha</u>; <u>Lễ cầu phúc</u> của người <u>Mường</u>;
+            <u>Lễ hội xên bản, cầu mưa</u> của người <u>Thái</u>,
+            <u>Lễ mừng măng mọc</u> của nhiều dân tộc vùng Tây Bắc...
+          </p>
+
+          <p>
+            <u>Sơn La</u> còn có các di tích như <u>Nhà tù Sơn La</u>,
+            <u>Bảo tàng Sơn La</u> ở thành phố <u>Sơn La</u>,
+            <u>Chùa Chiền Viện</u> ở <u>Mộc Châu</u>... tạo nên một bức tranh
+            văn hóa và lịch sử đặc sắc.
+          </p>
+          <p style="font-size: 15px">
+            (nguồn:
+            <a href="https://vi.wikipedia.org/wiki/S%C6%A1n_La" target="_blank"
+              >wiki Sơn La</a
+            >)
+          </p>
+
+          <h2 style="font-size: 40px">
+            <strong><mark>LỄ HỘI:</mark></strong>
+          </h2>
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              <strong>-Các lễ hội tiêu biểu của tỉnh Sơn La:</strong>
+            </summary>
+            <ol type="1">
+              <li>
+                <mark><strong> Lễ hội Hoa Ban</strong></mark>
+                <p>Thời gian: <u>tháng 2 âm lịch </u></p>
+                <p>
+                  Địa điểm: <u>Công viên Đông Xên và Quảng trường Tây Bắc</u>
+                </p>
+                <p>
+                  Lễ hội Hoa Ban tổ chức vào dịp tháng 2 âm lịch là dịp quảng
+                  bá, giới thiệu về tiềm năng thiên nhiên, con người, lịch sử,
+                  văn hóa đậm đà bản sắc dân tộc của Thành phố Sơn La, với mục
+                  tiêu xây dựng thành phố Sơn La trở thành “Thành phố Hoa Ban”,
+                  là điểm đến hấp dẫn đông đảo du khách trong và ngoài nước.
+                </p>
+                <p>
+                  Lễ hội Hoa Ban thể hiện nét văn hóa tâm linh trong đời sống
+                  tinh thần của đồng bào dân tộc Thái với tâm nguyện thỉnh bái
+                  “Then” – vị thần tối cao trong hàng ngũ thánh thần theo quan
+                  niệm của người Thái; thỉnh bái “nàng Ban” – một nữ nhân vật
+                  huyền thoại biểu thị cho sự trinh trắng của người thiếu nữ
+                  Thái và tình yêu đôi lứa thuỷ chung; thỉnh bái ma trời, ma
+                  mường, ma núi, ma sông… phù hộ cho mưa thuận gió hoà, mùa màng
+                  tươi tốt, vạn vật đơm hoa, kết trái, cho lứa đôi hạnh phúc và
+                  phù hộ cho cuộc sống của dân bản luôn đầm ấm, yên vui. Lễ hội
+                  Hoa Ban Sơn La với nhiều hoạt động văn hóa đậm đà bản sắc dân
+                  tộc thông qua các hội thi như trại du lịch - văn hóa, thêu
+                  khăn Piêu, ẩm thực dân tộc, tó má lẹ, kéo co, ném còn...
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/1-lehoi-hoa-ban.jpg"
+                    class="w3-container"
+                    alt="Lễ hội Hoa Ban"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <mark><strong>Lễ hội khinh khí cầu Quốc tế</strong></mark>
+                <p>Thời gian: <u>giữa tháng 2 hàng năm.</u></p>
+                <p>
+                  Địa điểm:
+                  <u
+                    >Huyện Mộc Châu, tỉnh Sơn La — cụ thể là khu vực cao nguyên
+                    Mộc Châu.</u
+                  >
+                </p>
+                <p>
+                  Lễ hội bay khinh khí cầu quốc tế năm nay được tổ chức với chủ
+                  đề về tình yêu, hứa hẹn đem lại những trải nghiệm thú vị cho
+                  người tham gia.
+                </p>
+                <p>
+                  Hình ảnh những quả khinh khí cầu đầy màu sắc bay lượn trên bầu
+                  trời thảo nguyên Mộc Châu - Sơn La tạo nên một khung cảnh
+                  tuyệt đẹp.
+                </p>
+                <p>
+                  Thông qua Lễ hội này, tỉnh Sơn La mong muốn sẽ quảng bá du
+                  lịch, đồng thời góp phần nâng cao sức hấp dẫn, thu hút ngày
+                  càng đông du khách trong và ngoài nước đến với Khu du lịch
+                  quốc gia Mộc Châu.Nếu như ban ngày, du khách được chiêm ngưỡng
+                  những chiếc khinh khí cầu rực rỡ và đẹp mắt thì buổi tối sẽ
+                  được hòa mình vào không gian sôi động của âm nhạc và ánh sáng
+                  trong đêm nhạc hội khí cầu.
+                </p>
+                <p>
+                  Nhiều du khách trong và ngoài nước đã chọn đến đến đây để
+                  chiêm ngưỡng, trải nghiệm và lưu giữ lại những khoảnh khắc đẹp
+                  nhất vào một ngày đặc biệt.
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/2-lehoi-khinh-khi-cau.jpg"
+                    class="w3-container"
+                    alt="Lễ hội khinh khí cầu Quốc tế"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <mark><strong>Lễ Hội Hết Chá</strong></mark>
+                <p>
+                  Thời gian:
+                  <u> tháng 3 dương lịch (Tức tháng 2 âm lịch) hằng năm</u>
+                </p>
+                <p>
+                  Địa điểm: <u>xã Đông Sang, huyện Mộc Châu, tỉnh Sơn La</u>
+                </p>
+                <p>
+                  Hàng năm cứ đến tháng 3 dương lịch (Tức tháng 2 âm lịch) là
+                  đồng bào Thái Trắng ở xã Đông Sang, huyện Mộc Châu, tỉnh Sơn
+                  La lại tưng bừng tổ chức Lễ hội Hết Chá được người Thái trắng
+                  tại xã Đông Sang, huyện Mộc Châu, tỉnh Sơn La tổ chức để tạ ơn
+                  Thầy mo (tiếng Thái là Phì Mun) đã chữa khỏi bệnh cho người
+                  dân trong bản mường. Từ xa xưa, người Thái rất nghèo, lại sinh
+                  sống ở những vùng xa xôi, hẻo lánh nên không thể tìm được
+                  thuốc về chữa bệnh. Họ tìm đến thầy mo nhờ làm cúng để người
+                  bệnh có tư tưởng thoải mái, cùng với uống thuốc nam đã giúp
+                  cho họ khỏi bệnh. Những người ốm sau khi khỏi bệnh đã xin làm
+                  con nuôi thầy mo để tạ ơn công lao thầy đã chăm sóc chữa trị
+                  bệnh.
+                </p>
+                <p>
+                  Lễ hội Hết Chá có hai phần: Lễ và Hội. Phần Lễ cầu kỳ mang nét
+                  văn hóa tâm linh sâu sắc.Phần hội mô phỏng lại cuộc sống bình
+                  dị thường ngày của đồng bào dân tộc Thái, với nhiều hình ảnh
+                  được tái hiện sinh động như: một chuyến đi săn, một chuyến đi
+                  bắt cá, tập trâu cày ruộng... với số lượng người tham gia
+                  khoảng 20-30 người trở lên. Mọi người cùng nhau nhảy múa quanh
+                  cây nêu, tạo không khí vui tươi, phấn khởi theo những vần thơ
+                  như hình ảnh tập trâu cày ruộng: “Trâu ơi cứ đi thẳng, biết
+                  cầy nương gia chủ mới yêu, biết làm ruộng gia chủ mới quý,
+                  Không thì dắt ra chợ bán. Nhảy xuống thửa dưới thì có hổ, nhảy
+                  lên thửa trên có rồng. Đi sai thì đau cổ, đỉ khổ thì đau vai…”
+                </p>
+                <p>
+                  Bên cạnh đó, Lễ hội còn tái hiện lại rất nhiều trò chơi dân
+                  gian, văn hóa, văn nghệ của dân tộc đặc sắc. Lễ hội Hết Chá
+                  mang ý nghĩa đoàn kết cộng đồng của người Thái Trắng mộc Châu.
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/3_LeHoiHetCha_(1).jpg"
+                    class="w3-container"
+                    alt="Lễ Hội Hết Chá"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <mark><strong>Lễ Hội Cầu Mưa</strong></mark>
+                <p>Thời gian: <u>rằm tháng 2 âm lịch hàng năm</u></p>
+                <p>Địa điểm: <u> Mộc Châu - Sơn La</u></p>
+                <p>
+                  Cứ vào dịp rằm tháng 2 âm lịch hàng năm, người Thái tại Mường
+                  Sang - Mộc Châu - Sơn La lại tổ chức lễ hội cầu mưa. Đây là
+                  thời điểm bắt đầu cho mùa màng của năm mới, để cầu cho dân bản
+                  được một năm bội thu, đồng thời giáo dục các thế hệ con cháu
+                  biết bảo vệ và tôn trọng môi trường sống.
+                </p>
+                <p>
+                  Người Thái ở Sơn La quan niệm rằng, thần linh cai quản mưa gió
+                  thương những đứa trẻ sinh ra không có cha (do mẹ chúng chửa
+                  hoang), không có mái nhà che đầu, nên đã không làm mưa xuống
+                  khiến cho trời hạn hán.Vì vậy dân bản phải làm lễ cầu mưa,
+                  cúng lễ các vị chủ nước, chủ sông suối, để mời thần linh về
+                  nghe nguyện vọng của bà con, đồng thời trách phạt những người
+                  phụ nữ đó đã không biết giữ mình.Việc tổ chức Lễ hội cầu mưa,
+                  nhằm mục đích củng cố và nâng cao hiểu biết của người dân về
+                  tầm quan trọng của nguồn nước, đồng thời giáo dục con cháu về
+                  ý thức bảo vệ môi trường sinh thái. Lễ hội cầu mưa còn thể
+                  hiện bản sắc văn hóa của người Thái cần được gìn giữ và phát
+                  huy đến với đông đảo quần chúng nhân dân.
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/4le-hoi-cau-mua-moc-chau-2.jpg"
+                    class="w3-container"
+                    alt="Lễ Hội Cầu Mưa"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <mark><strong>Lễ hội Gội đầu</strong></mark>
+                <p>
+                  Thời gian:
+                  <u
+                    >tháng Chạp âm lịch (tức 30 Tết âm lịch) — trước Tết Nguyên
+                    đán.</u
+                  >
+                </p>
+                <p>
+                  Địa điểm:
+                  <u
+                    >Huyện Quỳnh Nhai, tỉnh Sơn La — nơi cộng đồng người Thái
+                    sinh sống lâu đời và vẫn giữ gìn lễ hội truyền thống này</u
+                  >
+                </p>
+                <p>
+                  Lễ hội gội đầu được gắn với truyền thuyết nàng Han - vị tướng
+                  anh hùng cầm quân đánh đuổi giặc phương Bắc. Dẹp xong giặc,
+                  vào trưa 30 Tết Âm lịch, nàng Han ban lệnh cho quân sĩ nghỉ
+                  ngơi tắm gội để ăn mừng chiến thắng và đón năm mới. Lễ hội gội
+                  đầu còn có tên gọi là lễ hội Lung Ta.
+                </p>
+                <p>
+                  Đây là lễ hội có ý nghĩa hết sức quan trọng trong đời sống tâm
+                  linh của bà con người Thái nói chung và người Thái Trắng Quỳnh
+                  Nhai - Sơn La nói riêng. Lễ hội thể hiện tinh thần đoàn kết,
+                  tương thân tương ái, mang tính nhân văn sâu sắc và thân thiện
+                  của con người với tự nhiên. Theo quan niệm của người Thái
+                  Trắng, khi hết một năm cũ, mọi người đều phải thực hiện nghi
+                  lễ gội đầu để gột rửa những điều không may mắn, tống tiễn điều
+                  xấu theo dòng nước, trôi đi các điều không may. Đồng thời, mọi
+                  người, mọi nhà cầu mong một năm mới đến với nhiều điều tốt
+                  lành và gặp nhiều may mắn.Sau lễ hội là các trò chơi dân gian:
+                  tó má lẹ, ném còn... tạo không khí vui tươi, phấn khởi cho bà
+                  con đón năm mới và tăng cường mối quan hệ đoàn kết trong cộng
+                  đồng dân cư.Lễ hội gội đầu được huyện Quỳnh Nhai tổ chức hàng
+                  năm nhằm giữ gìn, phát huy và tôn vinh giá trị văn hóa truyền
+                  thống các dân tộc.
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/5-le-hoi-goi-dau.jpg"
+                    class="w3-container"
+                    alt="Lễ hội Gội đầu"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <mark><strong>Lễ hội đua thuyền Quỳnh Nhai</strong></mark>
+                <p>Thời gian: <u>ngày (Mồng 10 tháng Giêng) hàng năm</u></p>
+                <p>Địa điểm: <u>dưới chân Cầu Pá uôn.</u></p>
+                <p>
+                  Lễ hội đua thuyền Quỳnh Nhai là một hình thức sinh hoạt văn
+                  hóa cộng đồng hết sức độc đáo và ý nghĩa lớn trong việc bảo
+                  tồn, phát huy các giá trị văn hóa truyền thống cao đẹp của dân
+                  tộc, cũng là lễ hội đặc trưng của cư dân vùng sông nước bên
+                  dòng sông Đà hùng vĩ, thể hiện sức mạnh chinh phục thiên
+                  nhiên, duy trì nét đẹp và bản sắc văn hóa truyền thống, tạo
+                  bầu không khí thi đua sôi nổi, đoàn kết dân tộc được tổ chức
+                  vào ngày (Mồng 10 tháng Giêng) hàng năm dưới chân Cầu Pá uôn.
+                </p>
+                <p>
+                  Việc tổ chức lễ hội đua thuyền tại đây cũng là hoạt động nhằm
+                  giữ gìn và phát triển nét văn hóa truyền thống của đồng bào,
+                  đồng thời tôn vinh các giá trị bản sắc văn hóa dân tộc. Bên
+                  cạnh giải đua thuyền, lễ hội còn diễn ra các hoạt động thể
+                  thao dân tộc như: kéo co, bắn nỏ, ném còn, chọi gà...
+                </p>
+                <figure>
+                  <img
+                    src="https://dulichchaovietnam.com/public/fileupload/source/sanpham/son-la/lehoi/6-le-hoi-dua-thuye.jpg"
+                    class="w3-container"
+                    alt="Lễ hội đua thuyền Quỳnh Nhai"
+                  />
+                  <figcaption style="font-size: 15px">
+                    (nguồn:
+                    <a
+                      href="https://www.dulichchaovietnam.com/6-le-hoi-o-son-la-doc-dao-hap-dan-nhat.html"
+                      target="_blank"
+                      >dulichchaovietnam.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+            </ol>
+          </details>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="DITICH">
+        <h1 class="w3-center" style="font-size: 50px">
+          DI TÍCH, DI SẢN VĂN HOÁ
+        </h1>
+        <article>
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              -Một số di tích lịch sử:
+            </summary>
+            <ol type="1">
+              <li>
+                Rừng đại tướng Võ Nguyên Giáp<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/vbagL91gNnALVhCm9"
+                  target="_blank"
+                  >6GFW+2F2, QL37, Gia phù, Phù Yên, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - văn hoá. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/89077a6f-09f3-4bf3-828a-db0b4288d4f3-rung-dai-tuong-vo-nguyen-giap-son-lapng.png"
+                    class="w3-container"
+                    alt="Rừng đại tướng Võ Nguyên Giáp"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Di tích khảo cổ mái đá bản Mòn<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/Wg33Jobt6KLe7sGX9"
+                  target="_blank"
+                  >CPF4+Q2W, Thôn Mòn, Thuận Châu, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích Khảo cổ<br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/1fcb82b2-1b7b-4816-8af7-dda4bbd2ef93-di-tich-khao-co-mai-da-ban-mon-son-lapng.png"
+                    class="w3-container"
+                    alt="Di tích khảo cổ mái đá bản Mòn"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Đền thờ Nàng Han<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/ABn29cPsYUeBqpmP6"
+                  target="_blank"
+                  >MJ9M+439, Mường Giàng, Quỳnh Nhai, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - văn hoá. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/e11b5800-d51f-4e15-bc65-d34eecbe3b7c-den-nang-han-son-lapng.png"
+                    class="w3-container"
+                    alt="Đền thờ Nàng Han"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Hang A Phủ<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/CZiS2Mqta4ZYW84G7"
+                  target="_blank"
+                  >5CVX+XV9, Hồng Ngài, Bắc Yên, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - văn hoá. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/37a5c57b-ae72-419a-9ddc-1e3acbe5f6a6-hang-a-phu-son-lapng.png"
+                    class="w3-container"
+                    alt="Hang A Phủ"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Di tích lịch sử Ngã Ba Cò Nòi<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/v6AuhrnGzf58gy9F6"
+                  target="_blank"
+                  >45QV+QW8, QL37, Cò Nòi, Mai Sơn, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - cách mạng. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/2d45beff-cf56-4b28-90a3-7fc692a40d2f-di-tich-lich-su-nga-ba-co-noi-son-lapng.png"
+                    class="w3-container"
+                    alt="Di tích lịch sử Ngã Ba Cò Nòi"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Bãi đá cổ hang chú<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/cfJ4mP1MiSAADSuEA"
+                  target="_blank"
+                  >985C+G54, Unnamed Road, Bắc Yên, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích khảo cổ <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/2c3b6f27-eaa3-4f74-874a-afb22fef6beb-bai-da-co-hang-chu-son-lapng.png"
+                    class="w3-container"
+                    alt="Bãi đá cổ hang chú"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Khu di tích Bia Căm Thù Km 64<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/4EVhSQvE3BnrrPeW7"
+                  target="_blank"
+                  >410 Trần Huy Liệu, TT. Mộc Châu, Mộc Châu, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - cách mạng. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/c643a08c-1758-4ad2-a27c-13df9cc23a6e-khu-di-tich-bia-cam-thu-km-64png.png"
+                    class="w3-container"
+                    alt="Khu di tích Bia Căm Thù Km 64"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Bảo tàng tỉnh Sơn La<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/PX1R6Mm6ug1jbBxu8"
+                  target="_blank"
+                  >8WJ5+86Q, Khau Cả, P. Tô Hiệu, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - văn hoá. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/9db23b44-e938-40be-ab77-faa1b76796aa-bao-tang-tinh-son-lapng.png"
+                    class="w3-container"
+                    alt="Bảo tàng tỉnh Sơn La"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Cây đa Bản Hẹo<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/PugJsf5N3BLZ1meb7"
+                  target="_blank"
+                  >8WJ6+XQ3, Chu Văn Thịnh, P. Tô Hiệu, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích thiên nhiên. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/f244775a-d389-4cbf-964b-b65c01de29e9-cay-da-ban-heo-son-lapng.png"
+                    class="w3-container"
+                    alt="Cây đa Bản Hẹo"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                Di Tích Nhà Tù Sơn La<br />-Địa điểm:<a
+                  href="https://maps.app.goo.gl/35HDjwCbrH4Zh2Gf8"
+                  target="_blank"
+                  >Khau Cả, P. Tô Hiệu, Sơn La, Vietnam</a
+                >
+                <br />-Loại di tích:Di tích lịch sử - cách mạng. <br />
+                <figure>
+                  <img
+                    src="https://images.travelviet.net/vietnam/s3/s3_amazon/de268aa9-c973-45fb-9911-6ac93a1fc94f-nha-tu-son-lapng.png"
+                    class="w3-container"
+                    alt="Di Tích Nhà Tù Sơn La"
+                  />
+                  <figcaption style="font-size: 15px" class="w3-animate-left">
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://travelviet.net/vn/news/son-la/diem-danh-16-di-tich-lich-su-tai-son-la-lieng-thieng-lau-doi"
+                      target="_blank"
+                      >travelviet.net</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </li>
+            </ol>
+          </details>
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              -Ngoài ra còn có các di sản văn hoá phi vật thể như:
+            </summary>
+            <ol type="1">
+              <li>
+                -Chữ viết cổ của người Thái<br />
+                - Loại hình: Tiếng nói, chữ viết<br />
+                <figure>
+                  <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.t9X16mJcWs7OQyLXsxHLWQHaFS?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Chữ viết cổ của người Thái"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://vanhoanvietnam.blogspot.com/2016/03/chu-viet-co-cua-nguoi-thai-son-la.html"
+                      target="_blank"
+                      >blogspot.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghi lễ Xé Pang Á (Cầu an) của người Kháng<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡngg<br />
+                <figure>
+                  <img
+                    src="https://toquoc.mediacdn.vn/zoom/600_315/280518851207290880/2023/9/20/edit-8o5a0677-16952183138441670051533-76-33-1162-1771-crop-16952183567421848255699.png"
+                    class="w3-container"
+                    alt="Nghi lễ Xé Pang Á"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://toquoc.vn/le-xe-pang-a-dan-toc-khang-son-la-20230920124827689.htm"
+                      target="_blank"
+                      >toquoc.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Lễ cầu an (Pang A) của người La Ha<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.cvvBIABBc2PCHEAMZN3N7AHaFG?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Lễ cầu an (Pang A)"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://mia.vn/cam-nang-du-lich/le-cau-an-cua-nguoi-la-ha-net-dep-van-hoa-cua-dong-bao-vung-cao-7329"
+                      target="_blank"
+                      >mia.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Lễ cúng dòng họ (Tu su) của người Mông<br />
+                - Loại hình:Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://media.vietnamplus.vn/images/c14f6479e83e315b4cf3a2906cc6a51e8c0218388a4fa14bb99ff693072eeaaabc6fe0a79e4d12ac35af751156d2c86f5de25ce57612dce811d921d5b5e95a28/le_du_su_2.jpg.webp"
+                    class="w3-container"
+                    alt="Lễ cúng dòng họ (Tu su)"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamplus.vn/le-cung-dong-ho-cua-nguoi-mong-trang-di-san-phi-vat-the-quoc-gia-post905747.vnp"
+                      target="_blank"
+                      >vietnamplus.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Lễ Hết chá của người Thái<br />
+                - Loại hình: lễ hội truyền thống<br />
+                <figure>
+                  <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.bugwRjCMYu18DLsLYwF6WQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Lễ Hết chá"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://bvhttdl.gov.vn/tai-hien-le-hoi-het-cha-cua-nguoi-thai-tai-ngoi-nha-chung-617999.htm"
+                      target="_blank"
+                      >bvhttdl.gov.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Lễ Kin pang then của người Thái trắng<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://th.bing.com/th/id/OIP.kl8PimJxB5PyaTMY3ynCXgHaFE?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Lễ Kin pang then"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://dantoctongiao.baodantoc.vn/le-kin-pang-then-cua-nguoi-thai-trang-muong-lay-1596856639647.htm"
+                      target="_blank"
+                      >dantoctongiao.baodantoc.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Mo Mường<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.dhDIWXi08W6MI0jiJ8zNBgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Mo Mường"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://baodautu.vn/gui-ho-so-di-san-van-hoa-phi-vat-the-mo-muong-va-nghe-thuat-cheo-trinh-unesco-d211932.html"
+                      target="_blank"
+                      >baodautu.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghệ thuật Khèn của người H'Mông<br />
+                - Loại hình:Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.on7f5QbH9pdaMAnONIXVRAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Nghệ thuật Khèn"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.amazingvietnam.vn/2019/05/khen-bieu-tuong-van-hoa-cua-nguoi-mong.html"
+                      target="_blank"
+                      >amazingvietnam.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghệ thuật tạo hoa văn trên trang phục truyền thống của người
+                Mông hoa<br />
+                - Loại hình: Tri thức dân gian<br />
+                <figure>
+                  <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.mUT5d1RS5boZjot3xgzGqgHaFK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Nghệ thuật tạo hoa văn"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://vanhoatamlinh.com/nghe-thuat-theu-hoa-van-tren-trang-phuc-truyen-thong-nguoi-mong-hoa/"
+                      target="_blank"
+                      >vanhoatamlinh.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghệ thuật trang trí trên trang phục của người Dao tiền<br />
+                - Loại hình: Tri thức dân gian<br />
+                <figure>
+                  <img
+                    src="https://th.bing.com/th/id/R.419f00ce4097e6675329f5b3a99a3c15?rik=ULfzbhy3j7O3bA&riu=http%3a%2f%2ftuanmuasamtructuyen.vn%2fwp-content%2fuploads%2f2022%2f04%2fHoa-tiet-trang-tri-va-trang-suc-doc-dao-tren-trang-phuc-cua-phu-nu-Dao-do-1024x829.jpg&ehk=AKMYh5SUTSGHObiyYwWwQD2jKlVNuN8XdFX9vMtE9f4%3d&risl=&pid=ImgRaw&r=0"
+                    class="w3-container"
+                    alt="Nghệ thuật trang trí"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="http://tuanmuasamtructuyen.vn/trang-phuc-nguoi-dao/"
+                      target="_blank"
+                      >tuanmuasamtructuyen.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghệ thuật Xòe Thái<br />
+                - Loại hình: Nghệ thuật trình diễn dân gian<br />
+                <figure>
+                  <img
+                    src="https://th.bing.com/th/id/OIP.RAWZl9cHXiDY28FsokMRlwHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Nghệ thuật Xòe Thái"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://vovworld.vn/vi-VN/sac-mau-cac-dan-toc-viet-nam/tu-hao-nghe-thuat-xoe-thai-o-son-la-1141931.vov"
+                      target="_blank"
+                      >vovworld.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghi lễ cấp sắc của người Dao<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://dulichkhatvongviet.com/wp-content/uploads/2020/09/le_cap_sac-768x512.jpg"
+                    class="w3-container"
+                    alt="Nghi lễ cấp sắc"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://dulichkhatvongviet.com/le-hoi-cap-sac/"
+                      target="_blank"
+                      >dulichkhatvongviet.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghi lễ Gội đầu (Lúng ta) của người Thái Trắng<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.AHO-gT9OqMfgxIXGOiOKZQHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Nghi lễ Gội đầu"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamplus.vn/nghi-le-goi-dau-cua-nguoi-thai-trang-net-dep-van-hoa-doc-dao-vung-tay-bac-post941301.vnp"
+                      target="_blank"
+                      >vietnamplus.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghi lễ Mạng Ma (Cầu sức khỏe) của người Xinh Mun Dạ<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://th.bing.com/th/id/OIP.s9-ZZYYiQ2huJaqMsIzS7AHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="w3-container"
+                    alt="Nghi lễ Mạng Ma"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://baosonla.vn/van-hoa-xa-hoi/doc-dao-nghi-le-muong-ma-cua-dong-bao-dan-toc-xinh-mun-jupkujbSR.html"
+                      target="_blank"
+                      >baosonla.vn</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                -Nghi lễ truyền thống trong đám cưới của người Dao Tiền<br />
+                - Loại hình: Tập quán xã hội và tín ngưỡng<br />
+                <figure>
+                  <img
+                    src="https://dulichvanho.com/uploads/news/2021_01/img_2012.jpg"
+                    class="w3-container"
+                    alt="Nghi lễ truyền thống trong đám cưới"
+                  />
+                  <figcaption>
+                    (nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://dulichvanho.com/Van-hoa-cac-dan-toc/nghi-le-trong-dam-cuoi-cua-nguoi-dao-tien-di-san-van-hoa-phi-vat-the-quoc-gia-77.html"
+                      target="_blank"
+                      >dulichvanho.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </li>
+            </ol>
+          </details>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="GIAODUC">
+        <h1 class="w3-center" style="font-size: 50px">GIÁO DỤC</h1>
+        <article>
+          <p>
+            <mark
+              ><strong
+                >1. Đổi mới sáng tạo, nâng cao chất lượng giáo dục</strong
+              ></mark
+            >
+          </p>
+          <p>
+            Ngành GD&ĐT tỉnh Sơn La đang chuyển mình mạnh mẽ trong thời đại công
+            nghiệp 4.0, hiện đại hóa phương pháp giảng dạy, quản lý, sử dụng
+            công nghệ và tạo dựng môi trường học tập thân thiện, hiệu quả. Toàn
+            tỉnh hiện có <u>609 cơ sở giáo dục</u> với
+            <u>hơn 379.800 học sinh</u>, mạng lưới trường lớp được mở rộng và
+            phân bố hợp lý.
+          </p>
+          <p>
+            Đội ngũ nhà giáo và cán bộ quản lý toàn tỉnh là <u>23.546 người</u>,
+            gồm <u>1 Phó giáo sư, 4 Tiến sĩ, 430 Thạc sĩ</u>, gần 17.000 người
+            có trình độ đại học, cao đẳng. Ngành chú trọng tập huấn, bồi dưỡng
+            nâng cao năng lực quản lý, giảng dạy để đáp ứng yêu cầu đổi mới căn
+            bản, toàn diện.
+          </p>
+
+          <p>
+            <mark
+              ><strong
+                >2. Cơ sở vật chất giáo dục được đầu tư đồng bộ</strong
+              ></mark
+            >
+          </p>
+          <p>
+            Năm học 2024–2025, Sơn La tuyển mới <u>hơn 52.000 học sinh</u> vào
+            các lớp đầu cấp. Hệ thống cơ sở vật chất tiếp tục hiện đại hóa:
+          </p>
+          <ul>
+            <li><u>Tỷ lệ phòng học kiên cố đạt 73%, bán kiên cố hơn 24%</u></li>
+            <li>
+              Các công trình phụ trợ như thư viện, phòng thí nghiệm, phòng học
+              bộ môn, nhà ở bán trú, nhà ăn, nước sạch, nhà vệ sinh được quan
+              tâm, đặc biệt tại các trường nội trú, bán trú vùng khó khăn.
+            </li>
+          </ul>
+          <p>Kết quả kỳ thi tốt nghiệp THPT năm 2024:</p>
+          <ul>
+            <li>
+              <u>11.544/11.561 thí sinh đỗ tốt nghiệp</u>, đạt
+              <u>99,85%</u> (tăng 0,16% so với năm 2023)
+            </li>
+            <li>Điểm trung bình đạt <u>6,4 điểm</u>, tăng 0,29 điểm</li>
+            <li>
+              Tỷ lệ tốt nghiệp hệ giáo dục thường xuyên đạt <u>99,91%</u>, xếp
+              thứ 3 toàn quốc
+            </li>
+          </ul>
+
+          <p>
+            <mark><strong>3. Ổn định giáo dục sau sắp xếp bộ máy</strong></mark>
+          </p>
+          <p>
+            Từ ngày <u>1/7/2025</u>, các trường học sẽ quản lý theo địa giới
+            hành chính mới. Sở GD&ĐT Sơn La đã hướng dẫn điều chỉnh quản lý hành
+            chính để <u>không gián đoạn hoạt động dạy – học</u> và bảo đảm quyền
+            lợi học sinh.
+          </p>
+          <p>
+            Ngành tiếp tục nâng chuẩn trình độ đào tạo giáo viên, đặc biệt trong
+            triển khai <u>Chương trình Giáo dục phổ thông 2018</u>, đảm bảo cơ
+            cấu, chất lượng và số lượng đội ngũ.
+          </p>
+
+          <p>
+            <mark
+              ><strong>4. Xây dựng môi trường giáo dục toàn diện</strong></mark
+            >
+          </p>
+          <p>
+            Sơn La chú trọng giáo dục đạo đức, kỹ năng sống và nghề nghiệp cho
+            học sinh, học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí
+            Minh.
+          </p>
+          <p>
+            Ngành tăng cường phòng chống bạo lực học đường, hướng dẫn kỹ năng xử
+            lý tình huống cho cán bộ quản lý, giáo viên để đảm bảo môi trường
+            học tập an toàn. Huy động nguồn lực xã hội, ưu tiên đầu tư vùng khó
+            khăn, giúp
+            <u>thu hẹp khoảng cách chất lượng giáo dục giữa các khu vực</u>.
+          </p>
+
+          <p>
+            <mark><strong>5. Những con số nổi bật</strong></mark>
+          </p>
+          <ul>
+            <li><u>609 cơ sở giáo dục; hơn 379.800 học sinh</u></li>
+            <li>
+              <u>23.546 cán bộ, giáo viên</u>; trong đó có
+              <u>430 thạc sĩ, 4 tiến sĩ, 1 PGS</u>
+            </li>
+            <li><u>Tỷ lệ tốt nghiệp THPT năm 2024 đạt 99,85%</u></li>
+            <li><u>Tỷ lệ phòng học kiên cố đạt 73%</u></li>
+            <li>
+              Gần
+              <u
+                >13.500 thí sinh dự thi tốt nghiệp THPT năm 2025 tại 600 phòng
+                thi</u
+              >
+            </li>
+          </ul>
+        </article>
+        <p style="font-size: 15px">
+          (nguồn thông tin:
+          <a
+            href="https://giaoducthoidai.vn/son-la-doi-moi-nang-cao-chat-luong-giao-duc-thoi-ky-moi-post738402.html"
+            target="_blank"
+            >giaoducthoidai.vn</a
+          >
+          )
+        </p>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="KINHTE">
+        <br />
+        <h1 class="w3-center" style="font-size: 50px">KINH TẾ</h1>
+        <article>
+          <h2 style="text-align: left">TÓM TẮT PHÁT TRIỂN KINH TẾ SƠN LA</h2>
+          <p>
+            <strong><mark>Kinh tế Sơn La năm 2018:</mark></strong>
+          </p>
+          <p>
+            Sơn La, một tỉnh thuộc Trung du và miền núi phía Bắc, dù đối mặt với
+            nhiều khó khăn về kinh tế do thời tiết và biến đổi khí hậu, nhưng
+            trong năm 2018, tổng sản phẩm trên địa bàn (GRDP) của tỉnh đã ước
+            tính tăng <u>5,59%</u> so với năm <u>2017</u>. Mặc dù không đạt mục
+            tiêu tăng trưởng <u>8,5%</u> đã đề ra, nhưng mức tăng trưởng này đã
+            phản ánh tính đúng đắn và hiệu quả của các giải pháp mà chính quyền
+            tỉnh đã chỉ đạo, giúp duy trì ổn định nền kinh tế.
+          </p>
+
+          <p>
+            <strong><mark>Tăng trưởng theo các khu vực:</mark></strong>
+          </p>
+
+          <p>
+            <strong>Khu vực nông, lâm nghiệp, thủy sản:</strong> Tăng trưởng
+            <u>6,18%</u>, đóng góp <u>1,40 điểm phần trăm</u> vào tổng tăng
+            trưởng của nền kinh tế tỉnh. Đây là khu vực có sự tăng trưởng mạnh
+            mẽ, đóng vai trò quan trọng trong nền kinh tế của Sơn La.
+          </p>
+
+          <p>
+            <strong>Khu vực công nghiệp và xây dựng:</strong> Tăng trưởng
+            <u>4,33%</u>, đóng góp <u>1,44 điểm phần trăm</u> vào tổng tăng
+            trưởng. Trong đó, ngành công nghiệp chế biến chế tạo tăng
+            <u>9,87%</u>, đóng góp <u>0,32 điểm phần trăm</u>. Ngành khai khoáng
+            cũng ghi nhận mức tăng cao là <u>34,66%</u>, đóng góp
+            <u>0,08 điểm phần trăm</u> vào tăng trưởng chung.
+          </p>
+
+          <p>
+            <strong>Khu vực dịch vụ:</strong> Tăng trưởng <u>6,33%</u>, đóng góp
+            <u>2,40 điểm phần trăm</u> vào tổng tăng trưởng. Một số ngành dịch
+            vụ lớn như giáo dục và đào tạo, bán buôn và bán lẻ cũng đạt được mức
+            tăng trưởng khá cao, đóng góp đáng kể vào sự tăng trưởng chung của
+            nền kinh tế.
+          </p>
+
+          <p>
+            <strong><mark>Cơ cấu kinh tế:</mark></strong>
+          </p>
+
+          <p>
+            Về cơ cấu kinh tế, các khu vực kinh tế của Sơn La có sự chuyển dịch
+            tích cực trong năm 2018. Cụ thể:
+          </p>
+          <ul>
+            <li>
+              <strong>Nông, lâm nghiệp và thủy sản:</strong> Chiếm
+              <u>22,28%</u> trong tổng sản phẩm của tỉnh.
+            </li>
+            <li>
+              <strong>Công nghiệp và xây dựng:</strong> Chiếm <u>33,44%</u>.
+            </li>
+            <li><strong>Dịch vụ:</strong> Chiếm <u>38,11%</u>.</li>
+            <li><strong>Thuế sản phẩm:</strong> Chiếm <u>6,17%</u>.</li>
+          </ul>
+
+          <p>
+            So với năm <u>2017</u>, tỷ trọng của khu vực
+            <strong>nông, lâm nghiệp, thủy sản</strong> giảm, trong khi
+            <strong>công nghiệp - xây dựng</strong> và
+            <strong>dịch vụ</strong> tăng trưởng mạnh mẽ.
+          </p>
+        </article>
+
+        <h2 style="text-align: center">Biểu đồ GRDP Sơn La 2016–2024</h2>
+        <p style="text-align: center">Đơn vị: tỷ đồng / %</p>
+        <figure
+          style="width: 80%; margin: auto"
+          class="w3-center chart-container"
+        >
+          <canvas id="grdpChartSonLa" class="w3-center"></canvas>
+          <figcaption>
+            <p style="font-size: 14px; text-align: center; margin-top: 5px">
+              Nguồn: Tổng cục Thống kê Việt Nam và ước tính từ số liệu GRDP của
+              tỉnh Sơn La<br />
+              <a
+                href="https://vi.wikipedia.org/wiki/S%C6%A1n_La"
+                target="_blank"
+                >wiki Sơn La</a
+              >
+            </p>
+          </figcaption>
+        </figure>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document
+            .getElementById("grdpChartSonLa")
+            .getContext("2d");
+
+          const grdpData = [
+            8700,
+            9300, 
+            10000,
+            11000, 
+            12000, 
+            13000, 
+            14000, 
+            15000, 
+            16000,
+          ];
+
+          const growthRate = [
+            0.05,
+            0.06, 
+            0.065, 
+            0.07, 
+            0.075, 
+            0.08, 
+            0.085, 
+            0.09, 
+            0.085, 
+          ];
+
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: [
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023",
+                "2024",
+              ],
+              datasets: [
+                {
+                  label: "GRDP Sơn La (tỷ đồng)",
+                  data: grdpData,
+                  backgroundColor: "#4CAF50",
+                  yAxisID: "y",
+                },
+                {
+                  label: "Tăng trưởng GRDP (%)",
+                  data: growthRate.map((v) => v * 100),
+                  backgroundColor: "#FF9800",
+                  yAxisID: "y1",
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { position: "top" },
+                title: {
+                  display: true,
+                  text: "GRDP và Tăng trưởng kinh tế Sơn La (2016–2024)",
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: false,
+                  position: "left",
+                  title: { display: true, text: "GRDP (tỷ đồng)" },
+                },
+                y1: {
+                  beginAtZero: true,
+                  position: "right",
+                  grid: { drawOnChartArea: false },
+                  title: { display: true, text: "Tăng trưởng (%)" },
+                },
+                x: { title: { display: true, text: "Năm" } },
+              },
+            },
+          });
+        </script>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="AMTHUC">
+        <h1 class="w3-center" style="font-size: 50px">ẨM THỰC</h1>
+        <h2>-Sơn La có rất nhiều đặc sản nổi tiếng có thể kể đến như:</h2>
+        <ol type="1">
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Cá nướng pa pỉnh tộp
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Pa pỉnh tộp thực chất là món cá nướng, nhưng được chế biến với
+                  những gia vị đặc trưng của vùng núi rừng Tây Bắc, đem đến
+                  hương vị đặc trưng mới lạ.
+                </p>
+                <p>
+                  Với những nguyên liệu như: Mắc khén, hạt dổi, rau thì là, rau
+                  húng, ớt, sả,... được nhồi vào bên trong bụng cá để ngấm, làm
+                  thịt cá thêm đậm đà khi ăn.
+                </p>
+                -Giá tham khảo: Khoảng 150.000 - 250.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/VdurK5SLLWkqQasT8"
+                  target="_blank"
+                  >8W96+HXJ, Chiềng Cơi, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/16-dac-san-son-la-mua-lam-qua-dam-bao-ai-cung-khen-nuc-no-202202171540477382.jpg"
+                    class="w3-container"
+                    alt="Cá nướng pa pỉnh tộp"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Nộm da trâu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Nộm da trâu là món ăn được chế biến theo công thức gia truyền
+                  của người Thái, hương vị ngon, lạ miệng.
+                </p>
+                <p>
+                  Da trâu sau khi làm sạch kỹ lưỡng, luộc chín thì được ướp với
+                  các gia vị như: Tỏi, nước măng chua, mắc khén rồi dùng ăn cùng
+                  với các loại rau rừng nhằm tăng thêm hương vị khi thưởng thức.
+                  Khi ăn, bạn sẽ cảm nhận được vị giòn mà hơi dai, ngọt ngọt của
+                  da trâu hòa quyện với những gia vị đặc trưng ngon miệng.
+                </p>
+                -Giá tham khảo: Khoảng 100.000 - 150.000VNĐ<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/RLE2szKtA5zJzpT79"
+                  target="_blank"
+                  >8WC8+G8F, Hoàng Quốc Việt, Chiềng Cơi, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/16-dac-san-son-la-mua-lam-qua-dam-bao-ai-cung-khen-nuc-no-202202171544295164.jpg"
+                    class="w3-container"
+                    alt="Nộm da trâu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Cơm lam
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Cơm lam chính là một trong những đặc sản nổi tiếng ở Sơn La và
+                  được nhiều khách du lịch mua về cho người thân và bạn bè thân
+                  thiết khi đến đây du lịch.
+                </p>
+                <p>
+                  Cơm lam Sơn La được làm từ gạo nếp cái hoa vàng, gạo cẩm đem
+                  ngâm cùng với muối và gừng qua đêm. Khi thưởng thức món này sẽ
+                  có mùi thơm nhẹ của gạo và gừng.
+                </p>
+                -Giá tham khảo: Khoảng 150.000 - 200.000VNĐ/ 1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/jihAytGYWmUB8J8y7"
+                  target="_blank"
+                  >9W56+C52, Lò Văn Giá, Chiềng An, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171517051871.jpg"
+                    class="w3-container"
+                    alt="Cơm lam"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Thịt trâu gác bếp Sơn La
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Đây là món được coi là đặc sản của vùng núi Tây Bắc nói chung
+                  và Sơn La nói riêng. Nguyên liệu là nên món ăn này chủ yếu từ
+                  thịt trâu hay heo được thả lan ở trên các sườn núi.
+                </p>
+                <p>
+                  Khi chế biến người ta được lọc ra thành từng miếng, ướp gia vị
+                  là muối, gừng, ớt, mắc khén, cùng một số phụ gia khác, sau đó
+                  họ sẽ hun từng miếng thịt trên khói của than củi đốt từ cây
+                  rừng.
+                </p>
+                -Giá tham khảo:Khoảng 800.000 - 1.000.000 VNĐ<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/xbgStnEJgnDu18hn7"
+                  target="_blank"
+                  >Số 310 Lê Duẩn, tổ 2, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171513024477.jpg"
+                    class="w3-container"
+                    alt="Thịt trâu gác bếp Sơn La"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Thịt muối chua Sơn La
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Một trong những đặc sản Sơn La làm quà được rất nhiều du khách
+                  yêu thích không thể bỏ qua món thịt muối chua. Món ăn này độc
+                  đáo ở chỗ càng để lâu năm thì càng có vị ngon và dai.
+                </p>
+                <p>
+                  Đây được coi là món ẩm thực truyền thống của người Dao. Làm
+                  thịt muối chua không khó nhưng để có được món thịt chua ngon
+                  thì phải trải qua một thời gian khá dài thì mới thưởng thức
+                  được chuẩn vị.
+                </p>
+                -Giá tham khảo:Khoảng 300.000 - 400.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/eXw7tc9RUwcUVRkd9"
+                  target="_blank"
+                  >38 Lò Văn Giá, P. Chiềng Lề, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171514090751.jpg"
+                    class="w3-container"
+                    alt="Thịt muối chua Sơn La"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Gạo nếp Mộc Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Gạo nếp nương Mộc Châu được người dân tộc H'mông trồng từ lâu
+                  với mục đích tự cung tự cấp. Sau này, khi người Kinh lên khai
+                  phá, thành lập nông trường mới. Lúc này gạo và các sản vật mới
+                  được mang bán và trao đổi. Với hương vị thơm ngon khó quên.
+                  Người ta gọi gạo nếp nương Mộc Châu là viên ngọc trai của Tây
+                  Bắc.
+                </p>
+                <p>
+                  Từ những hạt gạo nếp Mộc Châu bạn có thể chế biến thành nhiều
+                  món ăn ngon khác nhau mang đậm hương vị đặc trưng khác lạ. Vì
+                  vậy hãy mua ngay gạo nếp Mộc Châu về làm quà biếu nhé.
+                </p>
+                -Giá tham khảo: Khoảng 30.000 - 50.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/BytSGKxE1yF5XNLg7"
+                  target="_blank"
+                  >117 Hoàng Quốc Việt, P Bình Minh, Mộc Châu, Sơn La,
+                  Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171519014961.jpg"
+                    class="w3-container"
+                    alt="Gạo nếp Mộc Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Táo mèo Sơn La
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Ở Sơn La, táo mèo là một loại cây thân gỗ cho hoa và quả mọc ở
+                  khắp các thung lũng, miền núi ở độ cao 1.500m so với mực nước
+                  biển. Đến Sơn La vào những ngày mùa hè tháng 7, du khách sẽ
+                  say đắm trước những chùm táo mèo trắng hồng lủng lỉu trên cây.
+                </p>
+                <p>
+                  Táo mèo tươi mua về làm quà hay mứt táo mèo, siro táo mèo,
+                  rượu táo mèo, táo mèo sấy khô,… đều rất ngon, ai ai cũng
+                  thích.
+                </p>
+                -Giá tham khảo:Khoảng 10.000 - 20.000VNĐ/ 1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/vJHzb1phuewotGF79"
+                  target="_blank"
+                  >8WP6+W6X, Chu Văn Thịnh, P. Chiềng Lề, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171521024536.jpg"
+                    class="w3-container"
+                    alt="Táo mèo Sơn La"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Chuối dẻo Yên Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Hiện nay sản phẩm chuối sấy dẻo đang là một trong những đặc
+                  sản của huyện Yên Châu. Sản phẩm được làm từ những quả chuối
+                  chín vàng, ép mỏng rồi đem sấy, nướng, mang hương vị thơm ngon
+                  đặc biệt… khiến những thực khách khó có thể quên được mùi vị
+                  của món ăn này.
+                </p>
+                -Giá tham khảo: Khoảng 350.000 - 400.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/B5Hca1bgqSP4UdnVA"
+                  target="_blank"
+                  >27WX+48C, QL6, TT. Yên Châu, Yên Châu, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171522169096.jpg"
+                    class="w3-container"
+                    alt="Chuối dẻo Yên Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Nghệ đen rừng
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Nghệ đen rừng Sơn La, hay còn gọi là nghệ tím, nghệ đăm theo y
+                  học cổ truyền còn gọi là “nga truật”. Từ lâu đã được chứng
+                  minh là có tác dụng tốt trong việc chữa chứng đau dạ dày.
+                </p>
+                <p>
+                  Ngoài ra, nghệ đen còn được dùng nhiều để chữa đau bụng, ăn
+                  không tiêu, đầy hơi, bế kinh, tích huyết, hành kinh không
+                  thông, nhiều máu cục…Nghệ đen rừng Sơn La có nhiều công dụng
+                  như thế rất thích hợp để mua làm quà biếu cho gia đình và
+                  người thân.
+                </p>
+                -Giá tham khảo:Khoảng 200.000 - 250.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/tQc18WM3XqqrTMJC8"
+                  target="_blank"
+                  >8WP6+W6X, Chu Văn Thịnh, P. Chiềng Lề, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171523245413.jpg"
+                    class="w3-container"
+                    alt="Nghệ đen rừng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Tỏi đen Yên Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Tỏi đen Châu Yên vốn dĩ không có trong tự nhiên. Tỏi đen là
+                  thành phẩm khi tỏi tươi trải qua quá trình lên men chậm trong
+                  điều kiện nghiêm ngặt về nhiệt độ (60 độ C đến 90 độ C). Độ ẩm
+                  dao động từ 80 đến 90%.
+                </p>
+                <p>
+                  Thời gian lên men khá dài, kéo dài từ 30 – 60 ngày. Nhờ đó,
+                  tỏi trắng được lên men thành tỏi đen nhánh. Hàm lượng các hoạt
+                  chất trong tỏi đen tăng lên rất nhiều lần so với tỏi trắng khi
+                  sử dụng.
+                </p>
+                <p>
+                  Tỏi đen Châu Yên có nhiều chất dinh dưỡng cần thiết và nhiều
+                  công dụng đặc biệt có lợi cho cơ thể. Chính vì vậy đây là món
+                  quà ý nghĩa dành tặng cho người thân đấy nhé.
+                </p>
+                -Giá tham khảo:Khoảng 1.500.000 - 1.700.000 VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/8PrzaQXAXrneg3Cy7"
+                  target="_blank"
+                  >217 QL6, TT. Yên Châu, Yên Châu, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171524377771.jpg"
+                    class="w3-container"
+                    alt="Tỏi đen Yên Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Mật ong
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Một loại quà biếu có thể mua ở Sơn La nữa đó chính là mật ong.
+                  Mật ong nơi đây có hương vị núi rừng riêng biệt. Mật ong có
+                  dạng đặc trong và có màu cam. Mật đặc đặc, khi rót không cần
+                  phải dùng phễu.
+                </p>
+                <p>
+                  Mật ong hoàn toàn không pha trộn, để lâu không đổi màu và
+                  không đọng đường. Mật có hương vị đặc trưng của các loại hoa
+                  rừng Tây Bắc. Mật được thu hoạch hoàn toàn thủ công vì vậy giữ
+                  được hương thơm, vị ngọt nguyên chất.
+                </p>
+                -Giá tham khảo:Khoảng 250.000 - 350.000VNĐ/ 1 lít<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/hnDg8AduQ6qkpcdr9"
+                  target="_blank"
+                  >43 Ngõ 236 49, Đại Từ, Hoàng Mai, Hà Nội, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202202171526215744.jpg"
+                    class="w3-container"
+                    alt="Mật ong"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Sữa bò Mộc Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Sữa bò Mộc Châu ở Sơn La là một thương hiệu nổi tiếng về chất
+                  lượng, đây được coi là một đặc sản nổi tiếng toàn Việt Nam mà
+                  ai cũng phải nhớ đến khi tới Sơn La.
+                </p>
+                <p>
+                  Sữa bò Mộc Châu nguyên chất khi uống sẽ có hương thơm nhè nhẹ
+                  và thơm ngon nhất khi uống nóng. Bạn hãy mua về làm quà biếu
+                  cho người thân nhé. Bạn còn có cơ hội thưởng thức những chế
+                  phẩm từ sữa tươi Mộc Châu như sữa tươi nguyên chất, sữa bánh
+                  bơ, sữa đặc nữa đấy.
+                </p>
+                -Giá tham khảo:Khoảng 200.000 - 400.000VNĐ/ 1 lít sữa nguyên
+                chất<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/tqvgujpiKtELXAe67"
+                  target="_blank"
+                  >168 Hoàng Quốc Việt,, mộc châu, Sơn La 362854</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202111062341244748.jpg"
+                    class="w3-container"
+                    alt="Sữa bò Mộc Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Sữa chua nếp cẩm Mộc Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Sữa tươi Mộc Châu được lên men thành sữa chua. Gạo nếp cẩm
+                  tuyển chọn và nấu cháo tương đối cầu kỳ theo bí quyết gia
+                  truyền.
+                </p>
+                <p>
+                  Sữa chua nếp cẩm Mộc Châu là một món ăn vặt không còn xa lạ
+                  đối với mọi người và là món ăn rất mát, thơm ngon và quan
+                  trọng là không cảm thấy ngán, đảm bảo an toàn vệ sinh, không
+                  chất bảo quản không chất phụ gia.
+                </p>
+                -Giá tham khảo: Khoảng 120.000 - 200.000VNĐ/ 1 thùng<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/tqvgujpiKtELXAe67"
+                  target="_blank"
+                  >168 Hoàng Quốc Việt,, mộc châu, Sơn La 362854</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202111062342252711.jpg"
+                    class="w3-container"
+                    alt="Sữa chua nếp cẩm Mộc Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Chè Tà Xùa Bắc Yên
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Sơn La có đến hàng ngàn hecta chè xanh ngắt quanh năm. Đặc
+                  biệt, trên đỉnh Tà Xùa ở độ cao hơn 2.500m so với mực nước
+                  biển có một loại chè Shan tuyết cổ thụ trăm năm đem đến những
+                  giọt chè hương vị ngọt ngào và tốt cho sức khỏe, bạn đừng bỏ
+                  lỡ khi lựa chọn mua quà cho người thân, bạn bè.
+                </p>
+                -Giá tham khảo:Khoảng 900.000 - 1.100.000 VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a href="https://goo.gl/maps/hBDYHjYK6z6Jm7Wc6" target="_blank"
+                  >Xã Tà Xùa, huyện Bắc Yên, Sơn La</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202111062343300921.jpg"
+                    class="w3-container"
+                    alt="Chè Tà Xùa Bắc Yên"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Chè Mộc Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Tận hưởng hương trà thơm mát trong cái nắng trong veo và ngắm
+                  nhìn từng cụm mây trắng trôi chầm chậm trên các luống chè, tâm
+                  hồn chợt nhẹ bồng bềnh để cho những mệt nhọc tan biến ở đồi
+                  chè Mộc Châu.
+                </p>
+                <p>
+                  Ngắt một búp chè non bóng nhấp nhè nhẹ trong miệng, vị chè
+                  tươi hơi chan chát bùi bùi ngòn ngọt, nhắm mắt hít thật sâu,
+                  và ta sẽ chợt thấy mình trôi giữa những sóng chè êm ái. Đây là
+                  món quà rất thích hợp để mua về biếu bạn bè và người thân đấy.
+                </p>
+                -Giá tham khảo:Khoảng 250.000 - 350.000VNĐ/1kg<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/AhGD76psuw1MVnbbA"
+                  target="_blank"
+                  >RMMV+FM2, QL43, Phiêng Luông, Mộc Châu, Sơn La</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202111062343465379.jpg"
+                    class="w3-container"
+                    alt="Chè Mộc Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Rượu chuối Yên Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Rượu chuối từ lâu đã nổi tiếng là đặc sản của vùng đất Yên
+                  Châu và được bà con nơi đây chưng cất theo phương pháp thủ
+                  công truyền thống. Để có được rượu chuối ngon thì trước tiên
+                  phải lựa chọn loại chuối phải thật chín, thái mỏng rồi đem
+                  phơi nắng cho thật khô.
+                </p>
+                <p>
+                  Rượu ngâm phải dùng loại rượu cốt nguyên chất, cứ 1kg chuối
+                  hột thì ngâm khoảng 2-2,5 lít rượu nguyên chất. Đồ ngâm rượu
+                  phải là dùng lọ thủy tinh, rửa sạch. Bỏ chuối vào, chuối chiếm
+                  1/3 lọ, rượu chiếm 2/3 lọ rồi đậy nắp kỹ, ngâm 100 ngày sau là
+                  sử dụng được.
+                </p>
+                <p>
+                  Loại rượu này rất đặc biệt không phải ở đâu cũng có, chính vì
+                  vậy hãy mua về làm quà biếu khi đến Sơn La du lịch nhé.
+                </p>
+                -Giá tham khảo:Khoảng 200.000 - 300.000VNĐ/1 lít<br />
+                -Địa chỉ thưởng thức:
+                <a
+                  href="https://maps.app.goo.gl/dBmw5eMJ54Qc9sYN6"
+                  target="_blank"
+                  >311 AH13, TT. Yên Châu, Yên Châu, Sơn La, Vietnam</a
+                ><br />
+                <figure>
+                  <img
+                    src="https://cdn.tgdd.vn/Files/2021/11/06/1396257/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-202111062345179750.jpg"
+                    class="w3-container"
+                    alt="Rượu chuối Yên Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-14-dac-san-son-la-nay-ve-lam-qua-khien-ai-cung-khen-nut-no-1396257"
+                      target="_blank"
+                      >bachhoaxanh.com</a
+                    >
+                    )
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+        </ol>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="DULICH">
+        <h1 class="w3-center" style="font-size: 50px">DU LỊCH</h1>
+        <h2>-Sơn La có những điểm du lịch nổi tiếng như:</h2>
+        <ol type="1">
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Mộc Châu những mùa hoa
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Có lẽ Mộc Châu là địa điểm du lịch hot nhất tại Sơn La với đặc
+                  sản là những mùa hoa ban, hoa anh đào, hoa mận, hoa cải vàng…
+                  tràn ngập hương sắc. Mộc Châu cũng là cái tên kinh điển nhất
+                  khi nhắc đến du lịch vùng Tây Bắc với cung đường phượt đẹp như
+                  tranh vẽ. Bên cạnh đó, Mộc Châu còn có những địa điểm tham
+                  quan mà bạn không thể bỏ qua như:
+                </p>
+                <p>
+                  Bản Thung Cuông: Bản làng nhỏ xinh nằm nép bên sườn đồi là nơi
+                  sinh sống của đồng bào H’Mông. Dọc theo con đường độc đạo dẫn
+                  vào bản là hàng mận nở trắng xóa trong khoảng trước và sau
+                  Tết. Nối tiếp theo đó là những ruộng cải trắng nở rộ kéo dài
+                  đến tận chân trời. Chính những ruộng cải này đã giúp nơi đây
+                  trở thành địa điểm chụp hình cưới được nhiều bạn trẻ yêu
+                  thích.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-2.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Mộc Châu những mùa hoa"
+                  />
+                </figure>
+                <p>
+                  Bản Pa Phách: Với nét đặc trưng là hiện tượng mù sương vào
+                  buổi chiều, giúp cho khung cảnh trở nên huyền ảo, mát lạnh.
+                  Đến đây, bạn có thể kết hợp tìm hiểu đời sống sinh hoạt của
+                  đồng bào Mông xanh.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-3.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Bản Pa Phách"
+                  />
+                </figure>
+                <p>
+                  Thung lũng mận Nà Kha: Hãy đến đây vào mùa xuân, khi tiết trời
+                  se lạnh, bầu trời trong xanh, nắng vàng ấm áp khiến cho khung
+                  cảnh thung lũng tràn ngập sắc trắng của hoa mận thêm phần rực
+                  rỡ, xinh tươi. Nà Kha được xem là thung lũng mận có quy mô lớn
+                  nhất và cũng là địa điểm check in ở Sơn La nổi tiếng nhất.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-4.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Thung lũng mận Nà Kha"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Khám phá ngũ động bản Ôn huyền bí
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Nếu bạn đam mê khám phá và yêu thích vận động thì hãy thử khám
+                  phá ngũ động tại bản Ôn. Đây là hệ thống gồm 5 hang động được
+                  người dân địa phương phát hiện lần đầu tiên vào năm 2006. Vì
+                  tại đây chưa có nhiều dịch vụ du lịch nên những hang động vẫn
+                  giữ được vẻ đẹp hoang sơ, huyền bí.
+                </p>
+                <p>
+                  Bên trong hang được điểm xuyến bởi những khối đá nhũ thạch
+                  khổng lồ với hình thù độc đáo. Để khám phá quần thể hang động
+                  này, bạn sẽ phải dành khoảng 01 ngày để trekking theo con
+                  đường mòn dẫn vào hang. Khung cảnh ven đường cũng rất nên thơ
+                  với ruộng nương và những vạt hoa dại.
+                </p>
+                <p>
+                  Nếu đi tự túc, phượt cùng theo nhóm, bạn nên chuẩn bị kỹ các
+                  vật dụng cần thiết cho việc trekking như giày bata/ giày leo
+                  núi, quần áo gọn gàng (vào mùa đông nên mặc trang phục giữ
+                  ấm), gậy leo núi, thuốc cá nhân… và chú ý xem bảng chỉ dẫn dọc
+                  theo đường đi.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-18.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Khám phá ngũ động bản Ôn huyền bí"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Rừng thông bản Áng
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Từ thị trấn Mộc Châu, bạn chỉ cần di chuyển thêm khoảng 2km để
+                  đến rừng thông bản Áng. Khu rừng có tổng diện tích lên đến
+                  43ha với bầu không khí trong lành và khung cảnh thông xanh
+                  trập trùng trông rất mát mắt.
+                </p>
+                <p>
+                  Bạn có thể trải nghiệm cắm trại qua đêm tại rừng thông bản Áng
+                  để thỏa sức hít thở khí trời se lạnh và đón mình bình. Bên
+                  cạnh khu cắm trại, bạn còn có cơ hội tìm hiểu quy trình trồng
+                  dâu và tự tay thu hoạch dâu tây khi vào mùa (khoảng tháng 4
+                  đến tháng 11 hàng năm).
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-6-1024x683.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Rừng thông bản Áng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Thác Dải Yếm
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Thác Dải Yếm được ví như bảo vật mà thiên nhiên đã ưu ái ban
+                  tặng cho vùng đất Sơn La. Thác còn có tên gọi khác là thác
+                  Nàng vì gắn liền với truyền thuyết cô gái đã dùng dải yếm của
+                  mình để cứu chàng trai thoát khỏi dòng lũ dữ.
+                </p>
+                <p>
+                  Thác cao hơn 100m, chia thành 2 tầng chính. Trong đó tầng thứ
+                  nhất có tổng cộng 9 bậc, tầng thứ hai có 5 bậc. Vào độ từ
+                  tháng 4 đến tháng 10 hàng năm, khi lượng nước đổ về nhiều sẽ
+                  tạo nên những dòng chạy mạnh mẽ, tung bọt trắng xóa rất đẹp
+                  mắt.
+                </p>
+                <p>
+                  Khu vực xung quanh thác có các cây cổ thụ thân to, tán rộng
+                  cho bóng mát. Sau khi chụp hình check in thỏa thích, bạn có
+                  thể dành chút thời gian ngồi dưới bóng cây, chiêm ngưỡng vẻ
+                  đẹp của dòng thác, để tiếng nước xua tan mọi phiền lo trong
+                  cuộc sống.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-8.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Thác Dải Yếm"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Chinh phục đỉnh Tà Xùa
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Đỉnh Tà Xùa với sống lưng khủng long từ lâu đã nằm trong danh
+                  sách của những phượt thủ đam mê khám phá những cung đường Tây
+                  Bắc. Hoạt động nổi bật nhất tại đây là chinh phục con đường
+                  nhỏ và hẹp dẫn lên đỉnh Tà Xùa (được mệnh danh là sống lưng
+                  khủng long) và săn mây vào lúc sáng sớm. Từ tháng 10 đến tháng
+                  4 được xem là khoảng thời gian lý tưởng nhất để săn mây.
+                </p>
+                <p>
+                  Từ trên đỉnh, bạn có thể phóng tầm mắt chiêm ngưỡng khung cảnh
+                  hùng vĩ xung quanh với những dải ruộng bậc thang xanh mướt,
+                  thấp thoáng xa xa là mái lá khói bếp, tay có thể chạm đến mây
+                  trời.
+                </p>
+                <p>
+                  Do đường đi đến đỉnh Tà Xùa khá hiểm trở nên bạn cần chuẩn bị
+                  thật kỹ phương tiện di chuyển và đảm bảo tay lái luôn vững
+                  vàng. Nếu chưa có kinh nghiệm phượt hoặc ngại đi một mình thì
+                  bạn có thể tham khảo các tour săn mây trên đỉnh Tà Xùa để ghép
+                  đoàn và được hướng dẫn viên chỉ dẫn chi tiết.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-10-1024x614.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Chinh phục đỉnh Tà Xùa"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Hồng Ngài và câu chuyện Vợ chồng A Phủ
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Bạn có biết, truyện ngắn Vợ chồng A Phủ được nhà văn Tô Hoài
+                  lấy bối cảnh tại Hồng Ngài (thị trấn Bắc Yên, Sơn La) không?
+                  Đây là một bản nhỏ của dân tộc Mông với những nét đẹp mộc mạc,
+                  đơn sơn như chính tính cách của con người nơi đây.
+                </p>
+                <p>
+                  Tương truyền khi xưa thời tiết khắc nghiệt, mất mùa đói kém
+                  liên miên, dịch bệnh hoành hành, nhờ Giàng sai thần Hồng Ngài
+                  xuống dẹp loạn, giúp đỡ nên người dân mới khôi phục được cuộc
+                  sống ấm no, hạnh phúc. Cái tên Hồng Ngài cũng từ đó mà ra đời.
+                </p>
+                <p>
+                  Bản Hồng Ngài lọt thỏm giữa núi rừng hùng vĩ, từ bản bạn có
+                  thể phóng tầm mắt chiêm ngưỡng cảnh vật xung quanh. Nếu yêu
+                  thích thiên nhiên, bạn có thể trải nghiệm cảm giác cắm trại để
+                  săn mây sáng sớm kết hợp đón bình minh. Đặc biệt, vào tháng 8
+                  - 9 hàng năm, khu vực Hồng Ngài luôn thoang thoảng mùi thơm
+                  của táo mèo.
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-12.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Hồng Ngài và câu chuyện Vợ chồng A Phủ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Nhà tù Sơn La
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Bên cạnh việc khám phá cảnh đẹp thiên nhiên, bạn cũng có thể
+                  dành thời gian thăm thú di tích lịch sử nhà tù Sơn La tọa lạc
+                  tại đồi Khau Cả, tổ 9, P. Tô Hiệu, TP. Sơn La. Tuy không phổ
+                  biến như những địa điểm du lịch Sơn La ở trên nhưng nếu yêu
+                  thích lịch sử thì bạn cũng nên tham quan nơi này.
+                </p>
+                <p>
+                  Đây từng là nơi giam giữ 14 đoàn tù chính trị với hơn 1,000 tù
+                  nhân. Dù điều kiện vật chất vô cùng thiếu thốn, khó khăn, khắc
+                  nghiệt nhưng cũng chính tại nơi này đã bồi dưỡng thành công
+                  nhiều chiến sĩ tiêu biểu góp phần vào sự thắng lợi của CMT8
+                  như Lê Duẩn, Văn Tiến Dũng, Trường Chinh… Bên cạnh khu di tích
+                  nhà tù còn có nghĩa trang liệt sĩ 8. Cửa khẩu Lóng Sập
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-14.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Nhà tù Sơn La"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Đồi chè Mộc Châu
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Mộc Châu xứ Sơn La từ lâu đã vang danh với những sản phẩm chè
+                  hảo hạng. Do đó, top những địa điểm tham quan hấp dẫn ở Sơn La
+                  không thể thiếu đồi chè Mộc Châu.
+                </p>
+                <p>
+                  Từ tháng 2 đến tháng 12 hàng năm là khoảng thời gian đồi chè
+                  tươi tốt nhất, bạn nên tranh thủ đến tham quan và chụp hình
+                  lưu niệm. Sau đó, người dân sẽ thu hoạch, tỉa dọn vườn chè để
+                  chuẩn bị cho mùa vụ tiếp theo.
+                </p>
+                <p>
+                  Tham quan đồi chè Mộc Châu, bạn có thể lựa chọn đồi chè khu
+                  Đài Loan với tạo hình trái tim độc đáo hoặc sang các khu Mộc
+                  Sương, Tân Lập 1, 2, 3. Cần chú ý trong lúc tham quan, bạn
+                  đừng tự ý ngắt lá hay đi vào khu vực hạn chế nhé!
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-15.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Đồi chè Mộc Châu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Nhà máy thủy điện Sơn La
+              </summary>
+              <article class="detail-content">
+                <p>
+                  Khi được hoàn thành vào năm 2021 sau 3 năm xây dựng, nhà máy
+                  thủy điện Sơn La có quy mô lớn nhất khu vực Đông Nam Á. Cho
+                  đến hiện nay, công trình này vẫn đang là nhà máy thủy điện lớn
+                  nhất Việt Nam. Tính đến tháng 12/2021, nhà máy đã cung cấp hơn
+                  20 tỷ kWh điện cho hệ thống điện quốc gia.
+                </p>
+                <p>
+                  Khi đặt chân đến đây, bạn sẽ ngỡ ngàng khi chứng kiến công
+                  trình đồ sộ mà con người làm nên. Bên cạnh đó, khu vực lòng hồ
+                  vẫn giữa được dáng vẻ hoang sơ với không khí trong lành,
+                  thoáng đãng. Từ lòng hồ, xuất phát từ bến Mường Trai, bạn có
+                  thể chiêm ngưỡng núi đá hổ, núi bàn tay Phật, núi đá thủng… và
+                  khám phá hoạt động nuôi trồng thủy sản trên lòng hồ với đặc
+                  sản nổi tiếng là những chú cá tầm với kích thước khủng.
+                </p>
+                <p>
+                  Khi đến nhà máy thủy điện Sơn La, bạn đừng quên chụp ảnh tại
+                  địa điểm check in nổi tiếng ở Sơn La này nhé!
+                </p>
+                <figure>
+                  <img
+                    src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-16.jpg?tr=q-70,c-at_max,w-1000,h-600"
+                    class="w3-container"
+                    alt="Nhà máy thủy điện Sơn La"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-son-la/124658"
+                      target="_blank"
+                      >traveloka.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+        </ol>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16 w3-content" id="tiemnang">
+        <h1 class="w3-center" style="font-size: 50px">TIỀM NĂNG PHÁT TRIỂN</h1>
+        <article style="font-size: 20px; line-height: 1.7">
+          <p>
+            <strong
+              ><mark>Tiềm Năng Phát Triển Sơn La Sau Sáp Nhập</mark></strong
+            >
+          </p>
+
+          <p>
+            Sau sáp nhập các bản, tiểu khu,
+            <strong>Sơn La đã tăng quy mô dân số và nguồn lực địa phương</strong
+            >. Nhiều bản được mở rộng về số hộ, số nhân khẩu và đa dạng về thành
+            phần dân tộc, giúp tăng nguồn lực kinh tế, nhân lực tham gia các
+            hoạt động cộng đồng và phong trào địa phương. Chẳng hạn, bản Cơi
+            Quỳnh (xã Chiềng Mai, huyện Mai Sơn) sau sáp nhập có <u>106 hộ</u>,
+            <u>532 nhân khẩu</u>, đời sống nhân dân được cải thiện, thu nhập
+            bình quân đạt <u>56,6 triệu đồng/người/năm</u>, tỷ lệ hộ nghèo giảm
+            còn <u>0,92%</u>.
+          </p>
+
+          <p>
+            <strong
+              >Quá trình sáp nhập còn nâng cao hiệu quả quản lý của chính quyền
+              cơ sở</strong
+            >. Việc giảm số lượng bản từ <u>1.997</u> xuống còn
+            <u>920 bản</u> giúp tiết kiệm khoảng <u>106 tỷ đồng/năm</u> chi cho
+            hoạt động chung. Số lượng chi hội giảm <u>5.385</u>, gần
+            <u>10.000 người</u> hoạt động không chuyên trách được sắp xếp lại,
+            đồng thời UBND tỉnh giải quyết đầy đủ chế độ, chính sách cho gần
+            <u>10.000 người</u> với kinh phí gần <u>12,9 tỷ đồng</u>. Nhờ đó,
+            chính quyền cấp xã và bản hoạt động hiệu lực, hiệu quả hơn, dễ dàng
+            triển khai các chủ trương, chính sách của Đảng và pháp luật Nhà
+            nước.
+          </p>
+
+          <p>
+            <strong
+              >Việc sáp nhập còn cải thiện cơ sở hạ tầng và phúc lợi cộng
+              đồng</strong
+            >. Nhiều bản đã đầu tư nâng cấp đường nội bản, xây dựng nhà văn hóa,
+            khu vui chơi thể thao, hệ thống điện chiếu sáng và cảnh quan môi
+            trường. Những dự án này giúp thu hút nhân dân tham gia các phong
+            trào văn hóa, thể thao, tăng cường sự gắn kết cộng đồng, đồng thời
+            tạo điều kiện thuận lợi cho các hoạt động kinh tế, xã hội địa
+            phương.
+          </p>
+
+          <p>
+            <strong
+              >Một điểm quan trọng khác là sáp nhập bản tạo nền tảng cho việc
+              sắp xếp đơn vị hành chính cấp huyện và xã</strong
+            >. Thành công của các đợt sáp nhập bản giúp nhân dân đồng thuận, tạo
+            niềm tin để Sơn La tiếp tục mở rộng và thành lập các thị trấn, thị
+            xã như Quỳnh Nhai, Mộc Châu, mở rộng thị trấn Sông Mã. Điều này vừa
+            giúp phát triển kinh tế - xã hội, vừa nâng cao hiệu quả quản lý Nhà
+            nước ở địa phương.
+          </p>
+
+          <p>
+            <strong>Tổng thể</strong>, việc sắp xếp, sáp nhập bản, tiểu khu giai
+            đoạn 2018-2023 đã
+            <strong
+              >tinh gọn bộ máy, nâng cao hiệu lực quản lý, mở ra không gian phát
+              triển mới, ổn định và bền vững</strong
+            >. Đồng thời, nó giúp tăng nguồn lực kinh tế, gắn kết cộng đồng, cải
+            thiện đời sống nhân dân và làm tiền đề cho các dự án phát triển kinh
+            tế - xã hội tiếp theo, tạo cơ sở vững chắc cho sự phát triển toàn
+            diện của tỉnh Sơn La.
+          </p>
+        </article>
+        <p style="font-size: 15px" class="w3-center">
+          (Nguồn thông tin:
+          <a
+            href="https://baosonla.vn/phong-su/sap-nhap-mo-rong-khong-gian-phat-trien-moi-ky-ii-tao-tiem-luc-vung-niem-tin-1aiSBcNIg.html"
+            target="_blank"
+            >baosonla.vn</a
+          >)
+        </p>
+      </section>
+      <hr />
+    </main>
+
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <p>HẾT!</p>
+    </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("w3-hide");
+      }
+    </script>
+    <script>
+      const menuScroll = document.querySelector(".menu-scroll");
+      const btnLeft = document.querySelector(".left-btn");
+      const btnRight = document.querySelector(".right-btn");
+      const step = 200;
+      if (btnRight && btnLeft && menuScroll) {
+        btnRight.addEventListener("click", () => {
+          menuScroll.scrollLeft += step;
+        });
+        btnLeft.addEventListener("click", () => {
+          menuScroll.scrollLeft -= step;
+        });
+      }
+    </script>
+  </body>
+</html>
